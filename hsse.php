@@ -4,7 +4,7 @@ $page = [
     'slug'  => 'hsse',
     'title' => 'HSSE &amp; Quality',
     'desc'  => "Terk Energy's health, safety, security and environment commitment, and our quality management commitment.",
-    'image' => 'pipeyard.jpg',
+    'image' => 'hsse.jpg',
 ];
 require __DIR__ . '/includes/header.php';
 ?>
@@ -12,10 +12,8 @@ require __DIR__ . '/includes/header.php';
 
   <section class="pagehead">
     <div class="pagehead__ph">
-      <!-- TERK-PLACEHOLDER 15: standing in with the yard photograph. The safety image
-           this banner wants is a Terk toolbox talk or site inspection. Drop it in as
-           assets/img/hsse.jpg and change the two references on this page back. -->
-      <img src="/assets/img/pipeyard.jpg" alt="" width="2000" height="1500" fetchpriority="high">
+      <!-- Client-supplied. Terk-branded PPE; not stock. -->
+      <img src="/assets/img/hsse.jpg" alt="" width="1400" height="1958" fetchpriority="high">
     </div>
     <div class="shell">
       <nav class="crumbs" aria-label="Breadcrumb">

@@ -38,22 +38,27 @@ or the page jumps as images load.
 
 ## Current status
 
-`hsse.jpg` and `advisory.jpg` have been **deleted**, because the photographs in
-them showed people who were not African. Those two sections currently run as
-text, which the layout handles on its own; adding a file back under the same
-name restores the two-column arrangement automatically, with no code change.
+**Supplied and live:** `hsse.jpg` and `advisory.jpg`. Both show African workers
+and one carries Terk-branded PPE. Sections 1 and 2 below are closed; they are
+kept only as a record of what was asked for.
 
-The HSSE page banner is temporarily borrowing the pipe-yard photograph.
+**Still outstanding:** `welding.jpg` (section 3). The person in the current image
+is completely hooded, so no ethnicity is depicted either way, but it is stock and
+should be replaced.
 
-`welding.jpg` is still in place. The person in it is completely hooded, so no
-ethnicity is depicted either way. Replace it when you can, but it is not
-misrepresenting anyone in the meantime.
+Two notes on the supplied images, neither blocking:
+
+- Both arrived with a generation sparkle in the bottom-right corner. It has been
+  cropped out, and both were resampled from the full-size originals rather than
+  the smaller exports.
+- `advisory.jpg` still shows face masks. They date a photograph quickly, so it is
+  worth reshooting without them at some point. Not urgent.
 
 ---
 
 ## Urgent: the three images with people
 
-### 1. Safety briefing on site
+### 1. Safety briefing on site  *(supplied, closed)*
 
 | | |
 |---|---|
@@ -71,7 +76,7 @@ Outdoors on a real site is much better than an office. The point of the picture 
 that safety is something people actually do here, not a policy statement, so
 faces engaged with the task beat faces engaged with the camera.
 
-### 2. Engineers reviewing a drawing
+### 2. Engineers reviewing a drawing  *(supplied, closed)*
 
 | | |
 |---|---|
@@ -89,7 +94,7 @@ people mid-discussion, one of them pointing at the document. **No face masks**,
 they date the photograph immediately. Avoid the generic laptop-in-a-meeting shot;
 a real drawing on a real table is far stronger.
 
-### 3. Fabrication or welding
+### 3. Fabrication or welding  *(still needed)*
 
 | | |
 |---|---|

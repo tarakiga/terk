@@ -405,6 +405,18 @@ strong, b { font-weight: 640; }
 }
 .ph--flat::after { background: rgba(12, 20, 30, 0.28); }
 
+/* Terk's own photography. The unifying grade exists to make mismatched stock
+   belong to one set; applied to a picture carrying Terk's mark on a hard hat it
+   flattens the gold to grey and greys out the hi-vis, which is the opposite of
+   the point. These frames get a lighter treatment: enough to sit with the rest,
+   not enough to suppress the brand. As more stock is replaced with Terk's own
+   images, more of the set moves to this grade, and eventually all of it. */
+.ph--own > img { filter: grayscale(0.26) contrast(1.05) brightness(0.97); }
+.ph--own::before { opacity: 0.2; }
+.ph--own::after {
+  background: linear-gradient(180deg, rgba(12, 20, 30, 0.16) 0%, rgba(12, 20, 30, 0.05) 45%, rgba(12, 20, 30, 0.28) 100%);
+}
+
 /* --- Header -------------------------------------------------------------- */
 
 .masthead {

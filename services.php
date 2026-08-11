@@ -79,6 +79,10 @@ require __DIR__ . '/includes/header.php';
   <section class="stratum band" id="advisory" aria-labelledby="advisory-h">
     <div class="shell">
       <div class="stratum__grid" data-reveal-group>
+        <div class="ph ph--own" data-reveal>
+          <!-- Client-supplied; not stock. -->
+          <img src="/assets/img/advisory.jpg" alt="Terk Energy engineers reviewing a technical drawing together." width="1800" height="1057" loading="lazy">
+        </div>
         <div>
           <hr class="rule" data-reveal>
           <h2 class="h2" id="advisory-h" data-reveal style="margin-top:1.6rem">Advisory &amp; Consultancy Services</h2>

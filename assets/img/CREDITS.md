@@ -20,13 +20,16 @@ so the provenance of every file is traceable.
 | `welding.jpg` | Welder at work | Hoang NC | [pexels.com/photo/15888226](https://www.pexels.com/photo/a-welder-at-work-15888226/) |
 | `refinery.jpg` | Refinery at night | Tom Fisk | [pexels.com/photo/10407689](https://www.pexels.com/photo/oil-refinery-at-night-10407689/) |
 
-**Two files were removed and not replaced.** `hsse.jpg` and `advisory.jpg` both
-showed people who were not African, which the client ruled out. Free stock does
-contain African industrial photography, but almost all of it is building trades
-rather than oil and gas, and the closest welding candidates showed work being
-done with no protective equipment at all, which would contradict this site's own
-HSSE commitments. Rather than ship a compromise, those two sections now run
-without a photograph and the slots wait for Terk's own images. See IMAGE-BRIEF.md.
+**Two files are the client's own, not stock.** `hsse.jpg` and `advisory.jpg` were
+supplied by Terk Energy and show African workers, one of them wearing Terk-branded
+PPE. They replaced stock photographs whose subjects were not African. Because they
+carry Terk's own mark and colour, both are rendered with the lighter `.ph--own`
+grade rather than the heavy unifying grade used on stock; see DESIGN.md.
+
+Both were delivered with a generation sparkle in the bottom-right corner. That
+corner has been cropped away, and each file was resampled from the full-resolution
+original rather than the smaller export: `hsse.jpg` is 1400 x 1958 and
+`advisory.jpg` is 1800 x 1057.
 
 All remaining files were re-fetched at reduced widths (1280–1920px) after the first build,
 bringing the set from 6.9 MB to 4.5 MB. Per-page image payload is now 0.58 MB

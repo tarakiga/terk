@@ -150,6 +150,10 @@ require __DIR__ . '/includes/header.php';
     <div class="stratum band band--tight">
       <div class="shell">
         <div class="stratum__grid" data-reveal-group>
+          <div class="ph ph--own" data-reveal>
+            <!-- Client-supplied; not stock. -->
+            <img src="/assets/img/advisory.jpg" alt="Terk Energy engineers reviewing a technical drawing together." width="1800" height="1057" loading="lazy">
+          </div>
           <div>
             <h3 class="h2" data-reveal>Advisory &amp; Consultancy Services</h3>
             <p class="stratum__body" data-reveal>Technical and commercial judgement for assets and transactions, from due diligence through to gas commercialization.</p>
@@ -199,6 +203,10 @@ require __DIR__ . '/includes/header.php';
   <section class="band" aria-labelledby="hsse">
     <div class="shell">
       <div class="split split--flip" data-reveal-group>
+        <div class="ph ph--own" data-reveal>
+          <!-- Client-supplied. Terk-branded PPE; not stock. -->
+          <img src="/assets/img/hsse.jpg" alt="Two Terk Energy workers in personal protective equipment reviewing a checklist on site." width="1400" height="1958" loading="lazy">
+        </div>
         <div>
           <hr class="rule" data-reveal>
           <h2 class="h2" id="hsse" data-reveal style="margin-top:1.6rem">Safety carries the same priority as the schedule.</h2>
