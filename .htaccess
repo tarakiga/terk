@@ -42,6 +42,15 @@ ErrorDocument 404 /404.php
     Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self' 'unsafe-inline'; form-action 'self' mailto:; frame-ancestors 'self'; base-uri 'self'"
 </IfModule>
 
+# Credentials and the mail error log must never be served, even if the config
+# file ends up inside the web root rather than above it.
+<FilesMatch "^mail-config(\.example)?\.php$">
+    Require all denied
+</FilesMatch>
+<Files "terk-mail-errors.log">
+    Require all denied
+</Files>
+
 # Never serve the source material or the project documentation.
 <FilesMatch "\.(md|json|log)$">
     Require all denied

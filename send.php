@@ -17,6 +17,7 @@
 
 define('TERK', true);
 require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/mailer.php';
 
 /** Where enquiries land. Change this one line to route them elsewhere. */
 const ENQUIRY_TO = TERK_EMAIL;
@@ -46,21 +47,76 @@ function finish(int $code, string $message, bool $ok)
 }
 
 /**
- * Hand the message to the mail transport.
+ * Hand the message to a transport, in order of preference:
  *
- * TERK_MAIL_SINK is a development affordance only: set that environment
- * variable to a file path and messages are written there instead of sent, so
- * the whole path can be exercised on a machine with no mail server. It is
- * never set in production, where this is a plain mail() call.
+ *   1. A development sink, if TERK_MAIL_SINK is set. Never set in production.
+ *   2. SMTP, if a mail-config.php is found. This is the real path: shared hosts
+ *      frequently have mail() disabled or unconfigured, and mail sent straight
+ *      from a web server usually fails SPF and lands in spam anyway.
+ *   3. PHP mail(), as a last resort.
+ *
+ * $diagnostic is filled with the reason for a failure, for the log and for
+ * smtp-test.php. It is never shown to the visitor.
  */
-function deliver(string $to, string $subject, string $body, string $headers): bool
+function deliver(array $message, ?string &$diagnostic = null): bool
 {
     $sink = getenv('TERK_MAIL_SINK');
     if ($sink) {
-        $record = "=== " . gmdate('c') . " ===\nTo: {$to}\nSubject: {$subject}\n{$headers}\n\n{$body}\n\n";
+        $record = "=== " . gmdate('c') . " ===\nTo: {$message['to']}\n"
+            . "Subject: {$message['subject']}\nFrom: {$message['from_name']} <{$message['from_email']}>\n"
+            . "Reply-To: {$message['reply_name']} <{$message['reply_email']}>\n\n{$message['body']}\n\n";
         return (bool) file_put_contents($sink, $record, FILE_APPEND);
     }
-    return @mail($to, $subject, $body, $headers);
+
+    $config = terk_mail_config();
+    if ($config) {
+        $smtp = new TerkSmtp();
+        $message['from_email'] = $config['from_email'] ?? $message['from_email'];
+        $message['from_name']  = $config['from_name']  ?? $message['from_name'];
+        $message['to']         = $config['to_email']   ?? $message['to'];
+
+        if ($smtp->send($config, $message)) {
+            return true;
+        }
+        $diagnostic = 'SMTP failed: ' . $smtp->error();
+        terk_log_failure($diagnostic, $smtp->log());
+        return false;
+    }
+
+    $headers = implode("\r\n", [
+        'From: ' . $message['from_name'] . ' <' . $message['from_email'] . '>',
+        'Reply-To: ' . ($message['reply_name'] !== ''
+            ? '"' . $message['reply_name'] . '" ' : '') . '<' . $message['reply_email'] . '>',
+        'MIME-Version: 1.0',
+        'Content-Type: text/plain; charset=UTF-8',
+    ]);
+
+    if (@mail($message['to'], $message['subject'], $message['body'], $headers)) {
+        return true;
+    }
+
+    $diagnostic = 'No mail-config.php was found and PHP mail() returned false. '
+        . 'Either mail() is disabled on this host, or the SMTP credentials file is missing. '
+        . 'See HANDOFF.md section 4.';
+    terk_log_failure($diagnostic, []);
+    return false;
+}
+
+/** Record why a send failed, so the cause is recoverable after the fact. */
+function terk_log_failure(string $reason, array $transcript): void
+{
+    $entry = '[' . gmdate('c') . '] ' . $reason . "\n";
+    foreach ($transcript as $line) {
+        $entry .= '    ' . $line . "\n";
+    }
+    error_log('Terk enquiry: ' . $reason);
+
+    // Also keep a local copy where the host's error log is not reachable.
+    $file = dirname(__DIR__) . '/terk-mail-errors.log';
+    if (!is_writable(dirname($file))) {
+        $file = sys_get_temp_dir() . '/terk-mail-errors.log';
+    }
+    @file_put_contents($file, $entry, FILE_APPEND | LOCK_EX);
 }
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
@@ -194,14 +250,20 @@ $body = implode("\n", [
     'Received ' . gmdate('Y-m-d H:i') . ' UTC via ' . $host,
 ]);
 
-$headers = implode("\r\n", [
-    'From: ' . TERK_NAME . ' website <no-reply@' . $domain . '>',
-    'Reply-To: ' . ($headerName !== '' ? '"' . $headerName . '" ' : '') . '<' . $headerEmail . '>',
-    'MIME-Version: 1.0',
-    'Content-Type: text/plain; charset=UTF-8',
-]);
+/* The envelope. mail-config.php, when present, overrides the from and to
+   addresses, because the sending account has to match the credentials. */
+$envelope = [
+    'to'          => ENQUIRY_TO,
+    'subject'     => $subject,
+    'body'        => $body,
+    'from_email'  => 'no-reply@' . $domain,
+    'from_name'   => TERK_NAME . ' website',
+    'reply_email' => $headerEmail,
+    'reply_name'  => $headerName,
+];
 
-if (deliver(ENQUIRY_TO, $subject, $body, $headers)) {
+$diagnostic = null;
+if (deliver($envelope, $diagnostic)) {
     finish(200, 'Thank you. Your enquiry has been sent and we will reply to ' . $email . '.', true);
 }
 

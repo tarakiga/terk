@@ -43,3 +43,11 @@ Desktop.ini
 
 # Decision-page logs from the design session, not project files.
 /.impeccable/questions/
+
+# Live mail credentials. The template (mail-config.example.php) IS tracked;
+# the filled-in copy never is, and belongs above the web root anyway.
+/mail-config.php
+mail-config.php
+
+# Mail failure log written by send.php
+terk-mail-errors.log

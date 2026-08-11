@@ -13,6 +13,9 @@ thanks.php      Confirmation after the form is sent
 404.php         Not-found page
 
 send.php        The enquiry handler (see section 4)
+smtp-test.php   Mail diagnostic. Delete once the form works.
+mail-config.example.php  Template for the SMTP credentials
+includes/mailer.php      Small SMTP client, no dependencies
 .htaccess       Clean URLs, security headers, caching
 router.php      Local preview only; Apache ignores it
 
@@ -141,43 +144,80 @@ original and it can be swapped in everywhere at once.
 ## 4. The enquiry form
 
 The form posts to `send.php`, which validates the submission, rejects bots with
-a hidden honeypot, and emails **info@terkenergy.com** with the sender's address
-as Reply-To, so hitting reply in the inbox answers the enquirer directly. On
-success the visitor sees `thanks.php`.
+a hidden honeypot, and emails the enquiry with the sender's address as Reply-To,
+so hitting reply in the inbox answers the enquirer directly. On success the
+visitor sees `thanks.php`.
 
-Nothing to sign up for, no API key, no monthly cap, and enquiry contents never
-leave your own server. For a company receiving tender scopes, that last point
-matters.
+### It sends over SMTP
 
-**This was tested, not just written.** Every branch was exercised against a real
-PHP 8.4 server: rejected GET requests, silently-dropped bot submissions,
-validation errors, successful sends, the no-JavaScript redirect, and two attack
-attempts. A crafted name carrying `Bcc: victim@elsewhere.com` was flattened into
-a single line and the display name dropped, so no extra recipient header was
-produced; a forged `Host` header could not reach the From address. The exact
-email the form generates was captured and read.
+Your host's PHP `mail()` is not working, which is common on shared hosting and
+the reason the first test failed. The form now authenticates to your mailbox and
+sends properly, which is better anyway: mail handed straight to a web server
+usually fails SPF and lands in spam.
 
-**What was not tested:** actual delivery. That depends on your host's mail
-configuration and cannot be verified from here.
+**Setup, three steps:**
 
-**When you deploy:**
+1. Copy `mail-config.example.php` and fill in the password.
+2. Upload it as `mail-config.php` **one level above `public_html`**, in your home
+   directory, so it sits beside the website folder rather than inside it:
 
-1. Upload everything, keeping the folder structure.
-2. Send yourself a test enquiry.
-3. If nothing arrives, check spam first. If it is still missing, PHP `mail()` is
-   probably disabled on the account. Ask the host to enable it, or switch to
-   SMTP; the only file to change is `send.php`.
-4. **Set `TERK_MAIL_DOMAIN` in `includes/config.php` to your real domain.** Mail
-   sent `From:` a domain that does not match the sending server often fails SPF
-   and lands in spam.
-5. To route enquiries somewhere other than the general inbox, change the
-   `ENQUIRY_TO` line at the top of `send.php`.
+   ```
+   /home/uXXXXXXXX/mail-config.php     <-- credentials, not reachable over the web
+   /home/uXXXXXXXX/public_html/        <-- the website
+   ```
 
-**If you ever move to a host without PHP** (Netlify, Vercel, GitHub Pages), the
-pages would need converting back to HTML, but the form itself needs only one
-change: delete `send.php` and either add `data-netlify="true"` to the `<form>`
-tag or point its action at a Formspree endpoint. `terk.js` detects both and
-stands aside.
+3. Set its permissions to **600** (owner read/write only).
+
+`send.php` finds it automatically. If it cannot be placed above the web root, it
+will still be found inside the project folder, where `.htaccess` blocks it from
+being served, but above the root is materially safer and is the intended place.
+
+The template is filled in for **Titan** (`smtp.titan.email`, port 465), which is
+what your account uses. Port 465 is implicit TLS. If the host blocks it, switch
+to port 587 and add `'smtp_secure' => 'tls'`.
+
+### When something goes wrong, find out what
+
+`smtp-test.php` runs the whole conversation with the mail server and prints it,
+including the exact rejection message. The enquiry form deliberately tells
+visitors nothing; this tells you everything.
+
+```
+https://www.terkenergy.com/smtp-test?token=YOUR_TEST_TOKEN
+```
+
+The token is the `test_token` value you set in `mail-config.php`; without it the
+page refuses to run, so nobody who finds the URL can probe your mail setup. From
+a shell, `php smtp-test.php` needs no token.
+
+It reports where it looked for the config, whether the password is set, whether
+openssl is available, whether the outbound port is open, and then the full
+session. **Delete `smtp-test.php` once the form is working.**
+
+Failures are also appended to `terk-mail-errors.log`, written above the web root,
+and to the host's PHP error log.
+
+### It was tested
+
+The SMTP client was exercised against a mock mail server: connection, `EHLO`,
+`AUTH LOGIN`, `MAIL FROM`, `RCPT TO`, `DATA`, `QUIT`, and the message read back
+to confirm the headers are well formed. A real enquiry was submitted through the
+form and arrived intact, multi-line scope and all. The failure path was tested
+too: with an unreachable server the visitor sees only "please email us directly"
+while the real cause is logged.
+
+Testing found two bugs worth mentioning, both now fixed: `mb_substr` is not
+guaranteed on shared hosting and crashed every submission, and the subject line
+was being quoted so it would have arrived as `"[Terk Energy] Enquiry: ..."`.
+
+**Not tested: delivery to a real mailbox.** That needs the password, which stays
+with you. Run `smtp-test.php` once after uploading and you will know in seconds.
+
+### If the site ever moves to a host without PHP
+
+Delete `send.php` and either add `data-netlify="true"` to the `<form>` tag or
+point its action at a Formspree endpoint. `terk.js` detects both and stands
+aside.
 
 **It never silently fails.** If no handler answers, the form falls back to
 opening the visitor's email application with the enquiry already composed. With
