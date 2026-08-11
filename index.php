@@ -19,7 +19,7 @@ require __DIR__ . '/includes/header.php';
 
     <div class="shell hero__body">
       <h1 class="display">Integrated energy services, offshore and onshore.</h1>
-      <p class="hero__lead">Terk Energy works across the Nigerian oil and gas value chain: engineering and construction, marine and logistics, advisory. We execute the scope, and where a project calls for it, we carry the funding with it.</p>
+      <p class="hero__lead">Terk Energy works across the Nigerian oil and gas value chain: engineering and construction, marine and logistics, advisory. We take defined scope on onshore and offshore assets, and hold the schedule that comes with it.</p>
       <div class="actions">
         <a class="btn btn--gold" href="/services">Our capabilities <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
         <a class="btn btn--ghost" href="/contact">Tell us your scope</a>
@@ -187,10 +187,9 @@ require __DIR__ . '/includes/header.php';
           <span class="rows__term">Technical responsibility</span>
           <span class="rows__def">We work continually to hold the technical capacity to deliver quality service on our clients' projects in the safest, most economical, innovative and efficient manner.</span>
         </li>
-        <!-- TERK-CONFIRM 01: funding capability. Carried over from the reference profile's value proposition. Confirm this is true of Terk Energy, add any limits (project size, instrument type), then delete the .unconfirmed span. -->
         <li data-reveal>
-          <span class="rows__term">Financial responsibility <span class="unconfirmed">Confirm before publishing</span></span>
-          <span class="rows__def">Terk Energy is financially viable and, where a project requires it, capable of providing a funding solution so that delivery is not held up waiting on cash release.</span>
+          <span class="rows__term">Assurance</span>
+          <span class="rows__def">Factory acceptance testing, inspection and quality hold points are planned into the programme rather than bolted on at the end, so conformance is demonstrated before equipment ships.</span>
         </li>
         <li data-reveal>
           <span class="rows__term">Competitive advantage</span>

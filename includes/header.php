@@ -58,7 +58,7 @@ $canonical = TERK_ORIGIN . url($slug);
 <!--
 THESIS: A services contractor's capability statement at the craft level of the majors' own vendor portals, refusing the interchangeable version: centred sentence over a dusk platform, three same-size icon cards, a four-stat counter row.
 OWN-WORLD: Warm-neutral paper alternating with blue-black plates; gold hairlines as the only structural ornament; one variable grotesque worked across its width axis: expanded for display, condensed tracked caps for labels; every photograph pushed through one desaturated blue-black grade so ten stock frames read as a single art direction.
-STORY: An indigenous integrated energy services company; EPCIC, marine and logistics, advisory; it executes and can fund; here is how to reach it.
+STORY: An indigenous integrated energy services company; EPCIC, marine and logistics, advisory; it takes defined scope and holds the schedule; here is how to reach it.
 FIRST VIEWPORT: Full-bleed offshore silhouette under a blue-black grade, transparent header, the offer left-ranged at display scale, two actions, and a gold-ruled index of the three service lines pinned across the base of the viewport.
 FORM: The category standard played straight, user-pinned by the steer "something more corporate like a petroleum company" after two re-rolls; seed key 31f4148f.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md

@@ -35,8 +35,8 @@ are usually on desktop, often in a hurry, and comparing several vendors in the s
 sitting.
 
 They are looking for specific, checkable things: does this company do the exact scope
-we need; have they done it before at our scale; can they fund the work upfront; are
-they safe; who do we call. Anything that does not help them answer those questions is
+we need; have they done it before at our scale; can they hold a schedule; are they
+safe; who do we call. Anything that does not help them answer those questions is
 noise to them.
 
 Secondary: **prospective technical/OEM partners** assessing Terk as a local execution
@@ -59,16 +59,19 @@ Terk sits at the junction of three things that indigenous energy service compani
 usually only have two of:
 
 1. **Technical execution** across EPCIC, marine & logistics, and advisory.
-2. **Upfront funding capacity.** Terk can carry 100% project funding so client
-   delivery is not gated on the client's own cash release cycle. This is the single
-   most differentiating claim in the source material and evaluators care about it
-   disproportionately.
+2. **Single point of responsibility.** Where Terk holds a package it holds the
+   schedule, the procurement and the site with it, rather than brokering a chain of
+   separate vendors back to the client.
 3. **Alternative Crude Evacuation (ACE)** as an end-to-end service covering clearance,
    security, shuttle tanker, STS transfer and hydrocarbon accounting, rather than as
    a brokered set of parts. This is a specific, non-generic capability.
 
-The honest position is "indigenous, integrated, and able to fund and clear the work
-itself," not "leading provider of quality solutions."
+The honest position is "indigenous, integrated, and able to take and clear the whole
+scope itself," not "leading provider of quality solutions."
+
+**Removed at the user's instruction:** every claim about upfront project funding.
+It originated in the reference profile rather than from Terk, and was cut from the
+hero, the value proposition, the services page and this record. Do not restore it.
 
 ## Operating Context
 
@@ -162,6 +165,10 @@ leadership names, client names, project values.
     competitive set, the oilfield-services and EPC contractors, SLB, Baker Hughes,
     Subsea7, Petrofac, Wood, rather than the supermajors, because Terk is a services
     contractor, not a producer. Their craft level is the bar.
+  - **People in photographs must be African** (user instruction, binding). Terk is a
+    Nigerian company and every image containing identifiable people must show Black
+    African subjects. This applies to every future image swap, and to any generated
+    or commissioned photography.
   - **Imagery policy** (assumed, same unanswered round): verified free-license
     photography, downloaded locally to `assets/img/`, every slot marked in the HTML for
     replacement with Terk's own photography. Sources are Pexels (free commercial use,
@@ -184,15 +191,16 @@ obviously non-documentary, or clearly flagged as placeholder for the client to r
 ## Product Principles
 
 1. **An evaluator's checklist beats a brand story.** Every section must help someone
-   decide whether to invite Terk to bid. Scope specificity, funding capacity, safety
+   decide whether to invite Terk to bid. Scope specificity, delivery record, safety
    posture, and a way to make contact outrank atmosphere.
 2. **Never claim what has not been verified.** An honest gap, visibly marked, is worth
    more than a borrowed credential, and a borrowed one is disqualifying in a
    pre-qualification process.
 3. **Speak the trade's language.** OCTG, FEED, STS, ACES, EPCIC. Precision reads as
    competence to this audience; simplification reads as distance from the work.
-4. **Funding capacity is the headline differentiator.** It should be visible early and
-   stated plainly, not buried in a value-proposition grid.
+4. **Never restate the funding claim.** The user removed every claim that Terk can
+   fund projects upfront. It came from the reference profile, not from Terk, and it
+   is not to be reintroduced in any form, on any page, however it is worded.
 5. **Light and durable.** Corporate desktops, mixed connectivity, no build step. The
    site must work with JavaScript off and stay under a weight an evaluator on a poor
    connection will tolerate.

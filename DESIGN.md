@@ -606,7 +606,7 @@ for the evaluator who prints a vendor page into a tender pack.
 - **Do** write base component styles for **paper first**, then add a `.plate ...` descendant override for the dark ground. The cascade runs light → dark; `.detail`, `.field`, `.tbc`, `.rows` and `.scope` are all built this way and this direction has already been inverted once by mistake.
 - **Do** make every header, footer and SVG-sprite edit in `includes/header.php` or `includes/footer.php`, which are the only place that chrome exists. Site-wide values (contact details, nav labels, the live origin) live in `includes/config.php`, and the nav is a single array rendered into both the masthead and the footer. This replaced markup that was duplicated by hand across six files and drifted silently; do not reintroduce a copy.
 - **Do** gate anything that hides content on `html.js`, and give it a `prefers-reduced-motion` off-switch. The site must be complete with `terk.js` absent.
-- **Do** leave `.tbc` and `.unconfirmed` exactly as loud as they are, and remove them by deleting the element once the fact is confirmed.
+- **Do** leave `.tbc` and `.unconfirmed` exactly as loud as they are, and remove them by deleting the element once the fact is confirmed. `.unconfirmed` currently has no instance in the markup, because the one claim it marked was withdrawn; it is retained deliberately for the next claim that ships before it is verified.
 - **Do** keep photography out of print and give every image intrinsic `width`/`height`.
 
 ### Don't:

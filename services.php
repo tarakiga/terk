@@ -110,7 +110,7 @@ require __DIR__ . '/includes/header.php';
       <ul class="rows" data-reveal-group>
         <li data-reveal>
           <span class="rows__term">Tubular procurement package</span>
-          <span class="rows__def">Procurement of casing or tubing to a stated grade, weight and range for a drilling programme. Our scope runs across manufacture with the OEM partner, factory acceptance testing, shipping, in-country clearing, and logistics through to delivery at the client's facility, with project execution and, where required, upfront funding on our side of the line.</span>
+          <span class="rows__def">Procurement of casing or tubing to a stated grade, weight and range for a drilling programme. Our scope runs across manufacture with the OEM partner, factory acceptance testing, shipping, in-country clearing, and logistics through to delivery at the client's facility, with project execution and the delivery schedule on our side of the line.</span>
         </li>
         <li data-reveal>
           <span class="rows__term">Alternative crude evacuation campaign</span>
@@ -139,11 +139,6 @@ require __DIR__ . '/includes/header.php';
         <li data-reveal>
           <span class="rows__term">Partners</span>
           <span class="rows__def">Original equipment manufacturers and technical partners are named into the scope from the outset rather than found once the contract is signed.</span>
-        </li>
-        <!-- TERK-CONFIRM 02: funding capability. Confirm, add any limits (project size, instrument type), then delete the .unconfirmed span. -->
-        <li data-reveal>
-          <span class="rows__term">Funding <span class="unconfirmed">Confirm before publishing</span></span>
-          <span class="rows__def">Where a project requires it, we can carry upfront project funding so that manufacture, freight and clearing are not held up waiting on cash release.</span>
         </li>
         <li data-reveal>
           <span class="rows__term">Assurance</span>

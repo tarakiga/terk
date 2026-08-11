@@ -57,20 +57,24 @@ Search the project for `TERK-PLACEHOLDER` and `TERK-CONFIRM` to find every one.
 
 ---
 
-## 1. Claims to confirm before this goes live
+## 1. Claims removed, and why that matters
 
-**`TERK-CONFIRM 01` and `02`: the funding claim.** Two places say Terk can carry
-upfront project funding so delivery is not held up waiting on cash release
-(`index.php` "Financial responsibility", `services.php` "Funding"). This is the
-single most commercially loaded sentence on the site and the strongest thing you
-have to say against a competitor, but it came from the reference profile, not
-from you. Both currently display a dashed gold **"Confirm before publishing"**
-badge next to the heading.
+Earlier drafts carried a claim that Terk can fund projects upfront so delivery is
+not held up waiting on cash release. **That has been removed everywhere** at your
+instruction: from the home page hero, from the value proposition, from the
+services page, and from the project record.
 
-- If it is true: confirm it, add any limits worth stating (project size ceiling,
-  instrument type), then **delete the `<span class="unconfirmed">...</span>`** in
-  both files.
-- If it is not true, or not yet: delete the whole row from both pages.
+It is worth saying plainly why this was the right call. That sentence came from
+Dajo Energy's profile, not from you. It is the kind of claim a procurement team
+tests, and being unable to evidence it during a pre-qualification is worse than
+never having made it. If Terk does have that capability and can evidence it, it
+can be added back deliberately, with whatever limits are true.
+
+**Nothing else on the site makes a commercial claim that has not been verified.**
+What remains is the service scope, the vision, mission and values, and the two
+HSSE and quality commitments, all of which describe intent rather than track
+record. Everything factual that is still missing is marked, and listed in the
+next section.
 
 ---
 
@@ -120,9 +124,13 @@ so wrong numbers are worse than none.
 | 08, 17 | `refinery.jpg` | About, Contact | A Terk facility or office |
 | 09 | `pipeline.jpg` | Services | Terk pipeline work |
 
-One rule when choosing replacements: **no other company's name or mark should be
-legible in any photograph.** Several otherwise-good stock candidates were
-rejected during sourcing for exactly this.
+Two rules when choosing replacements:
+
+1. **Everyone shown must be African.** Terk is a Nigerian company and its site
+   should look like it. Every photograph containing identifiable people was
+   re-sourced for this. Apply the same test to anything you swap in.
+2. **No other company's name or mark should be legible.** Several otherwise-good
+   stock candidates were rejected during sourcing for exactly this.
 
 **Also needed: a vector logo.** `assets/img/terk-mark.png` is the 416 x 563
 raster you supplied. It will soften on large screens. Send the SVG, AI or EPS
