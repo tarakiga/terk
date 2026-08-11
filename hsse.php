@@ -57,10 +57,6 @@ require __DIR__ . '/includes/header.php';
         <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Identify and comply with applicable legal and regulatory requirements.</li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Ensure that adequate resources are provided for the implementation and maintenance of our quality management system.</li>
       </ul>
-      <div class="tbc" data-reveal style="margin-top:2.75rem">
-        <b>To be supplied</b>
-        Certifications, accreditations, HSE performance statistics and vendor registration codes are not published here. Nothing has been carried across from the reference profile. Send us the certificates you hold and the figures you are willing to publish, and we will add them.
-      </div>
     </div>
   </section>
 

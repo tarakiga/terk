@@ -39,10 +39,6 @@ require __DIR__ . '/includes/header.php';
             <div><dt>Web</dt><dd><a href="https://www.terkenergy.com">www.terkenergy.com</a></dd></div>
           </dl>
 
-          <div class="tbc" data-reveal style="margin-top:2.5rem">
-            <b>Offices to be supplied</b>
-            Registered and operating office addresses are not published here. Nothing has been carried across from the reference company profile; those addresses belong to a different company. Send us yours and they will be listed with the details above.
-          </div>
         </div>
 
         <div data-reveal>

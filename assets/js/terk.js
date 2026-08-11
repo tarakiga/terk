@@ -5,23 +5,12 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* --- Masthead: transparent over the hero, solid once you leave it ------ */
-  var masthead = document.querySelector('.masthead');
-  if (masthead) {
-    var stick = function () {
-      masthead.classList.toggle('is-stuck', window.scrollY > 40);
-    };
-    stick();
-    window.addEventListener('scroll', stick, { passive: true });
-  }
-
   /* --- Mobile navigation ------------------------------------------------ */
   var burger = document.querySelector('.burger');
   var nav = document.getElementById('nav');
   if (burger && nav) {
     var setNav = function (open) {
       nav.classList.toggle('is-open', open);
-      masthead.classList.toggle('is-open', open);
       document.body.classList.toggle('is-locked', open);
       burger.setAttribute('aria-expanded', String(open));
       burger.querySelector('.burger__txt').textContent = open ? 'Close' : 'Menu';

@@ -81,26 +81,24 @@ next section.
 
 ---
 
-## 2. Content you need to supply
+## 2. Content still missing
 
-Each of these is a visible dashed-gold "to be supplied" panel on the live page.
-Replace the panel with real content, or delete it if the section is not wanted.
+The visible "to be supplied" panels have been removed at your request; they read
+as unfinished on a live site. The gaps they marked are still gaps, so they are
+listed here instead:
 
-| Where | What is missing |
+| Page | Not yet published |
 |---|---|
-| `about.php` | Company registration details, year of incorporation, headcount. |
-| `hsse.php` | Certifications and accreditations, HSE performance statistics, vendor registration codes. |
-| `contact.php` | Registered and operating office addresses. |
+| About | Company registration details, year of incorporation, headcount. |
+| HSSE & Quality | Certifications and accreditations, HSE performance statistics, vendor registration codes. |
+| Contact | Registered and operating office addresses. |
+
+None of these are invented anywhere on the site, which is the important part.
+Send them over and they go in.
 
 Deliberately **not built**, per your instruction: Our Certificates, NIPEX Codes,
-Our Leadership.
-
-**The Projects page has been removed** at your request. The honest capability
-descriptions that lived on it now sit on `services.php` under "What our
-engagements involve", where they describe the shape of work Terk is set up to
-take without claiming any particular contract. If you would rather they go too,
-delete that one section. When you do have a publishable track record, that
-section is the natural place to grow it into real case studies.
+Our Leadership, and the Projects page. The engagement descriptions that lived on
+Projects now sit on `services.php` under "What our engagements involve".
 
 ---
 

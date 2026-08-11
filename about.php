@@ -93,10 +93,6 @@ require __DIR__ . '/includes/header.php';
         <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Legal and corporate services</li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Administration and human resources</li>
       </ul>
-      <div class="tbc" data-reveal style="margin-top:2.5rem">
-        <b>To be supplied</b>
-        Company registration details, year of incorporation, headcount and leadership are not published here. Nothing has been carried across from the reference profile; those particulars belong to a different company. Send us yours and we will add them.
-      </div>
     </div>
   </section>
 

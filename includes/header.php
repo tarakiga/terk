@@ -78,7 +78,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="masthead<?= $slug === 'thanks' ? ' is-stuck' : '' ?>">
+<header class="masthead">
   <div class="shell masthead__in">
     <a class="brand" href="<?= url() ?>" aria-label="<?= e(TERK_NAME) ?> home">
       <img src="/assets/img/terk-mark.png" alt="" width="416" height="563">
