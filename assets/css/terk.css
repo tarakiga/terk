@@ -672,6 +672,14 @@ strong, b { font-weight: 640; }
   .split--wide-text { grid-template-columns: 1.15fr 0.85fr; }
   .split--flip > :first-child { order: 2; }
 }
+/* A section whose photograph has not been supplied yet spans the grid rather
+   than sitting in half of it beside nothing. A stratum fills the width, because
+   its two-column scope list uses it. A split caps to a reading measure, so the
+   rule ends with the prose instead of trailing across empty ground. Both revert
+   on their own the moment a figure is added back. */
+.split > :only-child,
+.stratum__grid > :only-child { grid-column: 1 / -1; }
+.split > :only-child { max-width: 52rem; }
 .split .ph { aspect-ratio: 4 / 3; }
 
 /* --- Stratum (service band) ---------------------------------------------

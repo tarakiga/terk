@@ -150,10 +150,6 @@ require __DIR__ . '/includes/header.php';
     <div class="stratum band band--tight">
       <div class="shell">
         <div class="stratum__grid" data-reveal-group>
-          <div class="ph" data-reveal>
-            <!-- TERK-PLACEHOLDER 05: stock planning photograph. Replace with Terk's own team. -->
-            <img src="/assets/img/advisory.jpg" alt="Two people in hard hats reviewing a technical drawing on site." width="2000" height="1333" loading="lazy">
-          </div>
           <div>
             <h3 class="h2" data-reveal>Advisory &amp; Consultancy Services</h3>
             <p class="stratum__body" data-reveal>Technical and commercial judgement for assets and transactions, from due diligence through to gas commercialization.</p>
@@ -203,10 +199,6 @@ require __DIR__ . '/includes/header.php';
   <section class="band" aria-labelledby="hsse">
     <div class="shell">
       <div class="split split--flip" data-reveal-group>
-        <div class="ph" data-reveal>
-          <!-- TERK-PLACEHOLDER 06: stock site-safety photograph. Replace with Terk's own HSE activity. -->
-          <img src="/assets/img/hsse.jpg" alt="Two workers in personal protective equipment reviewing a checklist on an industrial site." width="2000" height="3000" loading="lazy">
-        </div>
         <div>
           <hr class="rule" data-reveal>
           <h2 class="h2" id="hsse" data-reveal style="margin-top:1.6rem">Safety carries the same priority as the schedule.</h2>

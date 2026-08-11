@@ -19,10 +19,16 @@ so the provenance of every file is traceable.
 | `pipeyard.jpg` | Steel tubulars in a yard | Shuaizhi Tian | [pexels.com/photo/33791802](https://www.pexels.com/photo/industrial-steel-pipes-with-overhead-crane-in-yard-33791802/) |
 | `welding.jpg` | Welder at work | Hoang NC | [pexels.com/photo/15888226](https://www.pexels.com/photo/a-welder-at-work-15888226/) |
 | `refinery.jpg` | Refinery at night | Tom Fisk | [pexels.com/photo/10407689](https://www.pexels.com/photo/oil-refinery-at-night-10407689/) |
-| `hsse.jpg` | Workers in PPE | Mikael Blomkvist | [pexels.com/photo/8961055](https://www.pexels.com/photo/a-woman-wearing-ppe-showing-a-paperboard-to-a-man-8961055/) |
-| `advisory.jpg` | Reviewing drawings on site | Thirdman | [pexels.com/photo/8482865](https://www.pexels.com/photo/people-in-hard-hats-looking-at-a-blueprint-on-a-laptop-8482865/) |
 
-All files were re-fetched at reduced widths (1280–1920px) after the first build,
+**Two files were removed and not replaced.** `hsse.jpg` and `advisory.jpg` both
+showed people who were not African, which the client ruled out. Free stock does
+contain African industrial photography, but almost all of it is building trades
+rather than oil and gas, and the closest welding candidates showed work being
+done with no protective equipment at all, which would contradict this site's own
+HSSE commitments. Rather than ship a compromise, those two sections now run
+without a photograph and the slots wait for Terk's own images. See IMAGE-BRIEF.md.
+
+All remaining files were re-fetched at reduced widths (1280–1920px) after the first build,
 bringing the set from 6.9 MB to 4.5 MB. Per-page image payload is now 0.58 MB
 (contact) to 2.3 MB (home), and on every page only the header image loads
 eagerly, everything below the fold is `loading="lazy"`. Keep replacements in

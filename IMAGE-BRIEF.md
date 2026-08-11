@@ -1,8 +1,8 @@
 # Terk Energy: image brief
 
-Nine image slots. Three are **urgent** because they currently show people who are
-not African. Six are **optional upgrades**, where the current stock photograph is
-adequate but Terk's own work would be better.
+Nine image slots. Three concern people. Two of those have been removed from the
+site pending your photography, and the third is retained with a caveat. Six are
+**optional upgrades**, where the stock photograph is adequate but Terk's own work would be better.
 
 ## How to submit
 
@@ -33,6 +33,21 @@ or the page jumps as images load.
   real dirt on it. Avoid the white-background studio look and avoid anyone
   smiling at the camera holding a clipboard.
 - If people are identifiable, make sure you have their permission to publish.
+
+---
+
+## Current status
+
+`hsse.jpg` and `advisory.jpg` have been **deleted**, because the photographs in
+them showed people who were not African. Those two sections currently run as
+text, which the layout handles on its own; adding a file back under the same
+name restores the two-column arrangement automatically, with no code change.
+
+The HSSE page banner is temporarily borrowing the pipe-yard photograph.
+
+`welding.jpg` is still in place. The person in it is completely hooded, so no
+ethnicity is depicted either way. Replace it when you can, but it is not
+misrepresenting anyone in the meantime.
 
 ---
 
