@@ -46,13 +46,11 @@ kept only as a record of what was asked for.
 is completely hooded, so no ethnicity is depicted either way, but it is stock and
 should be replaced.
 
-Two notes on the supplied images, neither blocking:
-
-- Both arrived with a generation sparkle in the bottom-right corner. It has been
-  cropped out, and both were resampled from the full-size originals rather than
-  the smaller exports.
-- `advisory.jpg` still shows face masks. They date a photograph quickly, so it is
-  worth reshooting without them at some point. Not urgent.
+One note on the supplied images: each arrived with a generation sparkle in the
+bottom-right corner. Every corner has been cropped away and checked at 2x
+magnification, and all three were resampled from the full-size originals rather
+than the smaller exports. The advisory photograph was re-supplied without face
+masks, which is the version now live.
 
 ---
 

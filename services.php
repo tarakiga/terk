@@ -81,7 +81,7 @@ require __DIR__ . '/includes/header.php';
       <div class="stratum__grid" data-reveal-group>
         <div class="ph ph--own" data-reveal>
           <!-- Client-supplied; not stock. -->
-          <img src="/assets/img/advisory.jpg" alt="Terk Energy engineers reviewing a technical drawing together." width="1800" height="1057" loading="lazy">
+          <img src="/assets/img/advisory.jpg" alt="Terk Energy engineers reviewing a technical drawing together." width="1800" height="1078" loading="lazy">
         </div>
         <div>
           <hr class="rule" data-reveal>

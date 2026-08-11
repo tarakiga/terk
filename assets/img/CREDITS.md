@@ -29,7 +29,7 @@ grade rather than the heavy unifying grade used on stock; see DESIGN.md.
 Both were delivered with a generation sparkle in the bottom-right corner. That
 corner has been cropped away, and each file was resampled from the full-resolution
 original rather than the smaller export: `hsse.jpg` is 1400 x 1958 and
-`advisory.jpg` is 1800 x 1057.
+`advisory.jpg` is 1800 x 1078.
 
 All remaining files were re-fetched at reduced widths (1280–1920px) after the first build,
 bringing the set from 6.9 MB to 4.5 MB. Per-page image payload is now 0.58 MB
