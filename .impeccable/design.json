@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-12T00:00:00Z",
+  "title": "Design System: Terk Energy",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "oklch(96.6% 0.004 100)",
+        "note": "Default page ground; also the text colour of anything on ink.",
+        "tonalRamp": ["oklch(15% 0.004 100)", "oklch(26% 0.004 100)", "oklch(37% 0.004 100)", "oklch(48% 0.004 100)", "oklch(59% 0.004 100)", "oklch(71% 0.004 100)", "oklch(83% 0.004 100)", "oklch(95% 0.004 100)"]
+      },
+      "paper-sunk": {
+        "role": "neutral",
+        "displayName": "Sunk Paper",
+        "canonical": "oklch(93.5% 0.003 100)",
+        "note": "Half-step within the paper family; separates two paper bands that must abut.",
+        "tonalRamp": ["oklch(15% 0.003 100)", "oklch(26% 0.003 100)", "oklch(37% 0.003 100)", "oklch(48% 0.003 100)", "oklch(59% 0.003 100)", "oklch(71% 0.003 100)", "oklch(83% 0.003 100)", "oklch(95% 0.003 100)"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Field White",
+        "canonical": "#ffffff",
+        "note": "Form inputs only, the one surface that must read as writable.",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(37% 0 0)", "oklch(48% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(17% 0.021 250)",
+        "note": "Body text on paper and the primary button ground. Blue-black, taken from the company mark.",
+        "tonalRamp": ["oklch(15% 0.021 250)", "oklch(26% 0.021 250)", "oklch(37% 0.021 250)", "oklch(48% 0.021 250)", "oklch(59% 0.021 250)", "oklch(71% 0.021 250)", "oklch(83% 0.021 250)", "oklch(95% 0.021 250)"]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(42% 0.027 250)",
+        "note": "8.4:1 on paper. Prose, leads, row definitions, the default reading colour below heading rank.",
+        "tonalRamp": ["oklch(15% 0.027 250)", "oklch(26% 0.027 250)", "oklch(37% 0.027 250)", "oklch(48% 0.027 250)", "oklch(59% 0.027 250)", "oklch(71% 0.027 250)", "oklch(83% 0.027 250)", "oklch(95% 0.027 250)"]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Faint Ink",
+        "canonical": "oklch(52% 0.025 250)",
+        "note": "5.2:1 on paper. Table captions and optional-field qualifiers. Nothing quieter exists.",
+        "tonalRamp": ["oklch(15% 0.025 250)", "oklch(26% 0.025 250)", "oklch(37% 0.025 250)", "oklch(48% 0.025 250)", "oklch(59% 0.025 250)", "oklch(71% 0.025 250)", "oklch(83% 0.025 250)", "oklch(95% 0.025 250)"]
+      },
+      "rule-light": {
+        "role": "neutral",
+        "displayName": "Light Rule",
+        "canonical": "oklch(88% 0.004 100)",
+        "note": "Every structural hairline on paper. Not a text or fill colour.",
+        "tonalRamp": ["oklch(15% 0.004 100)", "oklch(26% 0.004 100)", "oklch(37% 0.004 100)", "oklch(48% 0.004 100)", "oklch(59% 0.004 100)", "oklch(71% 0.004 100)", "oklch(83% 0.004 100)", "oklch(95% 0.004 100)"]
+      },
+      "plate": {
+        "role": "neutral",
+        "displayName": "Plate",
+        "canonical": "oklch(18.5% 0.021 248)",
+        "note": "Dark section ground, hero, page header, stuck masthead, mobile nav panel.",
+        "tonalRamp": ["oklch(15% 0.021 248)", "oklch(26% 0.021 248)", "oklch(37% 0.021 248)", "oklch(48% 0.021 248)", "oklch(59% 0.021 248)", "oklch(71% 0.021 248)", "oklch(83% 0.021 248)", "oklch(95% 0.021 248)"]
+      },
+      "plate-foot": {
+        "role": "neutral",
+        "displayName": "Foot Plate",
+        "canonical": "oklch(15% 0.019 248)",
+        "note": "One step below plate. Footer ground and the masthead's over-hero scrim; lets the footer follow a plate band without merging.",
+        "tonalRamp": ["oklch(12% 0.019 248)", "oklch(23% 0.019 248)", "oklch(34% 0.019 248)", "oklch(46% 0.019 248)", "oklch(57% 0.019 248)", "oklch(69% 0.019 248)", "oklch(82% 0.019 248)", "oklch(95% 0.019 248)"]
+      },
+      "on-plate": {
+        "role": "neutral",
+        "displayName": "On Plate",
+        "canonical": "oklch(94.5% 0.005 245)",
+        "note": "Headings and body on dark ground.",
+        "tonalRamp": ["oklch(15% 0.005 245)", "oklch(26% 0.005 245)", "oklch(37% 0.005 245)", "oklch(48% 0.005 245)", "oklch(59% 0.005 245)", "oklch(71% 0.005 245)", "oklch(83% 0.005 245)", "oklch(95% 0.005 245)"]
+      },
+      "on-plate-soft": {
+        "role": "neutral",
+        "displayName": "On Plate Soft",
+        "canonical": "oklch(76% 0.022 245)",
+        "note": "8.6:1 on plate. Prose and leads on dark ground; footer links at rest.",
+        "tonalRamp": ["oklch(15% 0.022 245)", "oklch(26% 0.022 245)", "oklch(37% 0.022 245)", "oklch(48% 0.022 245)", "oklch(59% 0.022 245)", "oklch(71% 0.022 245)", "oklch(83% 0.022 245)", "oklch(95% 0.022 245)"]
+      },
+      "rule-plate": {
+        "role": "neutral",
+        "displayName": "Plate Rule",
+        "canonical": "rgba(233, 240, 248, 0.16)",
+        "note": "Every structural hairline on dark. Alpha-based so it rides whatever plate tone is beneath it.",
+        "tonalRamp": ["rgba(233, 240, 248, 0.04)", "rgba(233, 240, 248, 0.08)", "rgba(233, 240, 248, 0.12)", "rgba(233, 240, 248, 0.16)", "rgba(233, 240, 248, 0.24)", "rgba(233, 240, 248, 0.34)", "rgba(233, 240, 248, 0.5)", "rgba(233, 240, 248, 0.7)"]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Structural Gold",
+        "canonical": "oklch(63% 0.108 72)",
+        "note": "Surface and stroke only, the hairline rule, the gold button, the table-head underline, the dashed marker borders. Never a text colour.",
+        "tonalRamp": ["oklch(15% 0.108 72)", "oklch(26% 0.108 72)", "oklch(37% 0.108 72)", "oklch(48% 0.108 72)", "oklch(59% 0.108 72)", "oklch(71% 0.108 72)", "oklch(83% 0.108 72)", "oklch(95% 0.108 72)"]
+      },
+      "gold-deep": {
+        "role": "primary",
+        "displayName": "Deep Gold",
+        "canonical": "oklch(49% 0.093 68)",
+        "note": "5.0:1 on paper. The paper-ground text value of the accent, labels, dt terms, form labels, table headers, drawn links, tick glyphs, focus outline.",
+        "tonalRamp": ["oklch(15% 0.093 68)", "oklch(26% 0.093 68)", "oklch(37% 0.093 68)", "oklch(48% 0.093 68)", "oklch(59% 0.093 68)", "oklch(71% 0.093 68)", "oklch(83% 0.093 68)", "oklch(95% 0.093 68)"]
+      },
+      "gold-lift": {
+        "role": "primary",
+        "displayName": "Lifted Gold",
+        "canonical": "oklch(78% 0.100 78)",
+        "note": "9.5:1 on plate. The plate-ground text value of the accent; also the current-page nav indicator and the 'Energy' half of the wordmark.",
+        "tonalRamp": ["oklch(15% 0.100 78)", "oklch(26% 0.100 78)", "oklch(37% 0.100 78)", "oklch(48% 0.100 78)", "oklch(59% 0.100 78)", "oklch(71% 0.100 78)", "oklch(83% 0.100 78)", "oklch(95% 0.100 78)"]
+      },
+      "gold-on-gold": {
+        "role": "primary",
+        "displayName": "Gold-Ground Ink",
+        "canonical": "oklch(18% 0.032 62)",
+        "note": "Near-black brown, used only for text sitting on a gold button. A literal, not a CSS variable, it exists for exactly one relationship.",
+        "tonalRamp": ["oklch(15% 0.032 62)", "oklch(26% 0.032 62)", "oklch(37% 0.032 62)", "oklch(48% 0.032 62)", "oklch(59% 0.032 62)", "oklch(71% 0.032 62)", "oklch(83% 0.032 62)", "oklch(95% 0.032 62)"]
+      },
+      "photo-wash": {
+        "role": "tertiary",
+        "displayName": "Photo Wash",
+        "canonical": "oklch(29% 0.041 250)",
+        "note": "Never a UI colour. The mix-blend-mode: color layer that pulls every photograph onto one steel-blue axis.",
+        "tonalRamp": ["oklch(15% 0.041 250)", "oklch(26% 0.041 250)", "oklch(37% 0.041 250)", "oklch(48% 0.041 250)", "oklch(59% 0.041 250)", "oklch(71% 0.041 250)", "oklch(83% 0.041 250)", "oklch(95% 0.041 250)"]
+      },
+      "status-done": {
+        "role": "tertiary",
+        "displayName": "Complete Green",
+        "canonical": "oklch(48% 0.068 158)",
+        "note": "Signal only. The completed state of the track-record status dot; its counterpart is Deep Gold for open.",
+        "tonalRamp": ["oklch(15% 0.068 158)", "oklch(26% 0.068 158)", "oklch(37% 0.068 158)", "oklch(48% 0.068 158)", "oklch(59% 0.068 158)", "oklch(71% 0.068 158)", "oklch(83% 0.068 158)", "oklch(95% 0.068 158)"]
+      },
+      "error-ink": {
+        "role": "tertiary",
+        "displayName": "Error Ink",
+        "canonical": "oklch(44% 0.148 32)",
+        "note": "Form validation message text on paper. Paired with a #b03a24 field border and #f0a08c on plate.",
+        "tonalRamp": ["oklch(15% 0.148 32)", "oklch(26% 0.148 32)", "oklch(37% 0.148 32)", "oklch(48% 0.148 32)", "oklch(59% 0.148 32)", "oklch(71% 0.148 32)", "oklch(83% 0.148 32)", "oklch(95% 0.148 32)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The one H1 per page. 116% width, the widest setting in the system. Capped at 17ch in the hero, 20ch on inner page headers.", "fontStretch": "116%" },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s at 112% width. Steps down to the Statement size inside a service band so it never competes with the page H1.", "fontStretch": "112%" },
+      "statement": { "displayName": "Statement", "purpose": "The pull quote in a vision/mission band. Lighter (500) than the headings around it and capped at 22ch, a held sentence, not a shout.", "fontStretch": "104%" },
+      "title": { "displayName": "Title", "purpose": "H3s and the term column of ruled rows.", "fontStretch": "106%" },
+      "lead": { "displayName": "Lead", "purpose": "The paragraph directly under a heading. Capped at 54ch; the hero's own lead is capped tighter at 46ch.", "fontStretch": "100%" },
+      "body": { "displayName": "Body", "purpose": "Prose at 68ch. Tabular numerals site-wide because this world is full of tonnages, grades and telephone numbers.", "fontStretch": "100%" },
+      "label": { "displayName": "Label", "purpose": "Section markers in condensed gold caps. Its cousins, table heads, dt terms, form labels, footer headings, the .tbc heading, run 700 weight at 88% width and 0.15em.", "fontStretch": "88%" }
+    },
+    "widthRamp": [
+      { "stretch": "116%", "roles": "display" },
+      { "stretch": "112%", "roles": "headline / h2" },
+      { "stretch": "108%", "roles": "wordmark" },
+      { "stretch": "106%", "roles": "h3, ruled-row terms" },
+      { "stretch": "104%", "roles": "pull quote, open mobile nav" },
+      { "stretch": "100%", "roles": "body, lead, service index names" },
+      { "stretch": "96%", "roles": "drawn-underline links" },
+      { "stretch": "94%", "roles": "buttons" },
+      { "stretch": "92%", "roles": "nav links" },
+      { "stretch": "90%", "roles": "breadcrumbs, status pills" },
+      { "stretch": "88%", "roles": "all label-rank text" }
+    ],
+    "shadows": [
+      { "name": "none", "value": "none", "purpose": "The system has no elevation shadows at all. Depth comes from ground tone, photographic scrim, and the fixed masthead." },
+      { "name": "focus-field", "value": "inset 0 0 0 1px var(--gold-deep)", "purpose": "The only box-shadow in the stylesheet. Doubles a focused form field's border into a two-pixel gold edge. Not a lift. Uses --gold-lift on plate." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The only easing curve in the system. Fast out, long decelerating settle." },
+      { "name": "dur", "value": "0.62s", "purpose": "Base reveal duration. Interaction transitions run 0.2–0.34s; entrances run 0.6–1.8s." },
+      { "name": "hero-clip", "value": "clip-path 1.25s var(--ease), transform 1.8s var(--ease)", "purpose": "The authored moment: the hero photograph unfolds from inset(46% 0 46% 0) while scaling 1.14 → 1." },
+      { "name": "hero-stagger", "value": "calc(0.42s + var(--i, 0) * 0.085s)", "purpose": "Hero copy and the service index fade up 18px in sequence after the photograph starts opening." },
+      { "name": "reveal-stagger", "value": "calc(var(--i, 0) * 0.07s)", "purpose": "Per-group stagger for [data-reveal]. Indexed within the nearest [data-reveal-group], never globally." },
+      { "name": "rule-draw", "value": "transform 0.85s var(--ease)", "purpose": "A revealed gold rule scales in from the left (scaleX 0 → 1) instead of fading. The system's one ornament-in-motion." },
+      { "name": "photo-settle", "value": "transform 1.5s var(--ease)", "purpose": "Revealed photographs settle out of a scale(1.07) push-in." },
+      { "name": "reduced-motion", "value": "@media (prefers-reduced-motion: reduce)", "purpose": "Sets every revealed element to its final state, cancels the hero clip and image push-in, disables smooth scrolling, and clamps all transitions and animations to 0.01ms." }
+    ],
+    "breakpoints": [
+      { "name": "detail", "value": "34rem", "purpose": "Contact detail rows go two-column." },
+      { "name": "scope", "value": "44rem", "purpose": "Scope lists go two-column; the table's min-width relaxes below this." },
+      { "name": "rows", "value": "52rem", "purpose": "Ruled rows split into term and definition columns." },
+      { "name": "nav", "value": "56rem", "purpose": "Desktop nav appears and the mobile panel retires. Mirrored in terk.js as 896px." },
+      { "name": "grid", "value": "62rem", "purpose": "Split, stratum and contact grids engage; margin labels appear; the hero's asymmetric scrim replaces the vertical one." }
+    ],
+    "grounds": [
+      { "name": "paper", "value": "#f6f6f3", "purpose": "Default band ground." },
+      { "name": "sunk", "value": "#ebebe6", "purpose": "Half-step down, for two paper bands that must abut." },
+      { "name": "plate", "value": "#0c141e", "purpose": "Punctuation band, statement, value proposition, closing call. Never two in a row." },
+      { "name": "foot", "value": "#080d14", "purpose": "The footer, always last, always one step darker than plate." }
+    ],
+    "photoGrades": [
+      { "name": "standard", "selector": ".ph", "filter": "grayscale(0.66) contrast(1.09) brightness(0.92)", "wash": "#17293d mix-blend-mode: color @ 55%", "scrim": "linear-gradient(180deg, rgba(12,20,30,0.3), rgba(12,20,30,0.12) 45%, rgba(12,20,30,0.46))", "note": "Container carries isolation: isolate so the blend cannot escape into the page beneath. A --flat modifier swaps the vertical scrim for a flat 28% wash." },
+      { "name": "page-header", "selector": ".pagehead__ph", "filter": "grayscale(0.72) contrast(1.06) brightness(0.62)", "wash": "#17293d mix-blend-mode: color @ 60%", "scrim": "linear-gradient(96deg, rgba(8,13,20,0.94), rgba(8,13,20,0.72) 55%, rgba(8,13,20,0.5))", "note": "Pushed further than standard because display type sits directly on it." },
+      { "name": "hero", "selector": ".hero__ph", "filter": "grayscale(0.34) contrast(1.12) brightness(0.94) saturate(0.86)", "wash": "none, deliberately no colour-blend layer", "scrim": "linear-gradient(94deg, rgba(8,13,20,0.93), rgba(8,13,20,0.85) 33%, rgba(8,13,20,0.52) 60%, rgba(8,13,20,0.1)) + a vertical pass", "note": "Deliberately lighter than the other two so the rig stays legible at full-bleed scale; the scrim is asymmetric instead, protecting the copy on the left and clearing the image on the right. Below 62rem it reverts to a plain vertical scrim." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The ink action. Square, condensed caps, with an arrow that steps right on hover and a ground that swaps to Deep Gold.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Our capabilities <svg class=\"ds-ico\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3.5 12h17M14 5.5l6.5 6.5L14 18.5\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.7rem; padding: 0.95rem 1.6rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 680; font-stretch: 94%; letter-spacing: 0.11em; text-transform: uppercase; text-decoration: none; border: 1px solid transparent; border-radius: 0; background: #0b1119; color: #f6f6f3; cursor: pointer; transition: background 0.24s cubic-bezier(0.16,1,0.3,1), color 0.24s cubic-bezier(0.16,1,0.3,1), transform 0.24s cubic-bezier(0.16,1,0.3,1); } .ds-btn .ds-ico { width: 1.05em; height: 1.05em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: square; stroke-linejoin: miter; transition: transform 0.32s cubic-bezier(0.16,1,0.3,1); } .ds-btn:hover { background: #8a6116; color: #fff; } .ds-btn:hover .ds-ico { transform: translateX(4px); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid #8a6116; outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "The recruiting action, the capability-statement request in the masthead and the lead action in a hero or closing band. Gold ground, near-black brown text.",
+      "html": "<a class=\"ds-btn-gold\" href=\"#\">Request a capability statement <svg class=\"ds-ico\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3.5 12h17M14 5.5l6.5 6.5L14 18.5\"/></svg></a>",
+      "css": ".ds-btn-gold { display: inline-flex; align-items: center; gap: 0.7rem; padding: 0.95rem 1.6rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 680; font-stretch: 94%; letter-spacing: 0.11em; text-transform: uppercase; text-decoration: none; border: 1px solid transparent; border-radius: 0; background: #b8842a; color: #1a1204; cursor: pointer; transition: background 0.24s cubic-bezier(0.16,1,0.3,1), transform 0.24s cubic-bezier(0.16,1,0.3,1); } .ds-btn-gold .ds-ico { width: 1.05em; height: 1.05em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: square; stroke-linejoin: miter; transition: transform 0.32s cubic-bezier(0.16,1,0.3,1); } .ds-btn-gold:hover { background: #dfb35c; color: #1a1204; } .ds-btn-gold:hover .ds-ico { transform: translateX(4px); } .ds-btn-gold:active { transform: translateY(1px); } .ds-btn-gold:focus-visible { outline: 2px solid #8a6116; outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Always the second action, never alone. Transparent with a 32%-alpha ink border; hover fills solid and inverts.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Tell us your scope</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 0.7rem; padding: 0.95rem 1.6rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 680; font-stretch: 94%; letter-spacing: 0.11em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(11,17,25,0.32); border-radius: 0; background: transparent; color: #0b1119; cursor: pointer; transition: background 0.24s cubic-bezier(0.16,1,0.3,1), color 0.24s cubic-bezier(0.16,1,0.3,1), border-color 0.24s cubic-bezier(0.16,1,0.3,1); } .ds-btn-ghost:hover { background: #0b1119; color: #f6f6f3; border-color: #0b1119; } .ds-btn-ghost:active { transform: translateY(1px); } .ds-btn-ghost:focus-visible { outline: 2px solid #8a6116; outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Drawn Underline Link",
+      "kind": "custom",
+      "refersTo": "link-drawn",
+      "description": "Underlined at rest, un-underlined under the cursor. The rule retracts to zero width from the left over 0.34s, the inversion is deliberate.",
+      "html": "<a class=\"ds-link\" href=\"#\">More about the company <svg class=\"ds-ico\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3.5 12h17M14 5.5l6.5 6.5L14 18.5\"/></svg></a>",
+      "css": ".ds-link { display: inline-flex; align-items: center; gap: 0.55rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 660; font-stretch: 96%; letter-spacing: 0.02em; text-decoration: none; color: #8a6116; padding-bottom: 3px; background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size 0.34s cubic-bezier(0.16,1,0.3,1), color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-link .ds-ico { width: 1.05em; height: 1.05em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: square; stroke-linejoin: miter; transition: transform 0.32s cubic-bezier(0.16,1,0.3,1); } .ds-link:hover { background-size: 0 1px; } .ds-link:hover .ds-ico { transform: translateX(4px); } .ds-link:focus-visible { outline: 2px solid #8a6116; outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Gold Hairline Rule",
+      "kind": "custom",
+      "refersTo": "rule-gold",
+      "description": "The system's only ornament. One pixel of structural gold, opening a section above its heading, followed by 1.6rem. When revealed it draws in from the left rather than fading.",
+      "html": "<div class=\"ds-rule-demo\"><hr class=\"ds-rule\"><h2 class=\"ds-rule-h\">What we do</h2></div>",
+      "css": ".ds-rule { height: 1px; border: 0; background: #b8842a; transform-origin: left center; margin: 0; animation: ds-rule-draw 0.85s cubic-bezier(0.16,1,0.3,1) both; } @keyframes ds-rule-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } } .ds-rule-h { margin: 1.6rem 0 0; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: clamp(2.1rem, 4.2vw, 3.5rem); font-weight: 620; font-stretch: 112%; line-height: 1.04; letter-spacing: -0.025em; color: #0b1119; text-wrap: balance; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "White ground, square, with a condensed gold caps label above. Focus doubles the border into a two-pixel gold edge, no glow, no offset.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-f-org\">Company</label><input type=\"text\" id=\"ds-f-org\" placeholder=\"Who are you writing on behalf of?\"><span class=\"ds-err\">Enter the company you are writing on behalf of.</span></div>",
+      "css": ".ds-field { display: grid; gap: 0.5rem; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; max-width: 26rem; } .ds-field label { font-size: 0.75rem; font-weight: 700; font-stretch: 88%; letter-spacing: 0.15em; text-transform: uppercase; color: #8a6116; } .ds-field input { width: 100%; background: #fff; border: 1px solid #c9c9c1; border-radius: 0; color: #0b1119; padding: 0.9rem 1rem; font-size: 1rem; font-family: inherit; transition: border-color 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-field input::placeholder { color: #6b7683; } .ds-field input:hover { border-color: #9aa0a4; } .ds-field input:focus { outline: none; border-color: #8a6116; box-shadow: inset 0 0 0 1px #8a6116; } .ds-field input:user-invalid { border-color: #b03a24; } .ds-err { display: none; font-size: 0.8125rem; color: #9c2f1c; letter-spacing: 0.01em; } .ds-field input:user-invalid ~ .ds-err { display: block; }"
+    },
+    {
+      "name": "Service Index Item",
+      "kind": "nav",
+      "refersTo": "index-item",
+      "description": "The signature that replaces the category's three-icon card row: a ruled index pinned across the base of the first viewport, cells divided by plate hairlines, introduced by a Lifted Gold stroke icon.",
+      "html": "<div class=\"ds-index\"><a class=\"ds-index-item\" href=\"#\"><svg class=\"ds-ico-lg\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 21 12 3l8 18M7.6 13h8.8M5.9 17.2h12.2M12 8.5V21\"/></svg><span class=\"ds-index-name\">EPCIC Services<span class=\"ds-index-note\">Engineering, procurement, construction, installation and commissioning.</span></span></a><a class=\"ds-index-item\" href=\"#\"><svg class=\"ds-ico-lg\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3.2 14.4h17.6L18 20H6zM12 14.4V4.2M12 6.4h6l-2.4 2.4L18 11.2h-6M2.5 22c1.6-1.1 3.2-1.1 4.8 0s3.2 1.1 4.8 0 3.2-1.1 4.8 0 3.2 1.1 4.8 0\"/></svg><span class=\"ds-index-name\">Marine &amp; Logistics<span class=\"ds-index-note\">Alternative crude evacuation, vessel supply, offshore support.</span></span></a></div>",
+      "css": ".ds-index { display: grid; grid-template-columns: repeat(2, 1fr); background: #0c141e; border-top: 1px solid rgba(233,240,248,0.16); font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-index-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem 1.75rem; text-decoration: none; color: #eef1f4; border-left: 1px solid rgba(233,240,248,0.16); transition: background 0.28s cubic-bezier(0.16,1,0.3,1); } .ds-index-item:first-child { border-left: 0; } .ds-index-item:hover { background: rgba(238,241,244,0.05); } .ds-index-item:focus-visible { outline: 2px solid #dfb35c; outline-offset: -2px; } .ds-ico-lg { width: 1.6rem; height: 1.6rem; flex: none; fill: none; stroke: #dfb35c; stroke-width: 1.6; stroke-linecap: square; stroke-linejoin: miter; margin-top: 0.15rem; } .ds-index-name { font-size: 0.9375rem; font-weight: 660; font-stretch: 100%; letter-spacing: 0.01em; line-height: 1.25; } .ds-index-note { display: block; margin-top: 0.3rem; font-size: 0.8125rem; font-weight: 400; color: #a9b6c4; }"
+    },
+    {
+      "name": "Ruled Row",
+      "kind": "custom",
+      "refersTo": "row-ruled",
+      "description": "The value-proposition and company-values pattern. A term/definition pair on a shared baseline, divided by hairlines and nothing else. A --gold modifier puts the term in Deep Gold.",
+      "html": "<ul class=\"ds-rows ds-rows-gold\"><li><span class=\"ds-rows-term\">Our intent</span><span class=\"ds-rows-def\">To support our clients' objective to be leading players in the energy industry, and to become a trusted project delivery partner.</span></li><li><span class=\"ds-rows-term\">Competitive advantage</span><span class=\"ds-rows-def\">In-depth client understanding, a value-oriented approach, and strategic partnerships that give us execution speed.</span></li></ul>",
+      "css": ".ds-rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid #d8d8d1; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-rows > li { display: grid; gap: 0.5rem 2.5rem; padding: clamp(1.5rem, 2.6vw, 2.25rem) 0; border-bottom: 1px solid #d8d8d1; } @media (min-width: 52rem) { .ds-rows > li { grid-template-columns: minmax(12rem, 0.42fr) 1fr; align-items: baseline; } } .ds-rows-term { font-size: clamp(1.2rem, 1.55vw, 1.5rem); font-weight: 650; font-stretch: 106%; letter-spacing: -0.012em; line-height: 1.2; color: #0b1119; } .ds-rows-gold .ds-rows-term { color: #8a6116; } .ds-rows-def { color: #3d4a59; font-size: 1.0625rem; line-height: 1.6; max-width: 68ch; }"
+    },
+    {
+      "name": "Scope List",
+      "kind": "custom",
+      "refersTo": "scope-item",
+      "description": "Ruled single lines with a small gold tick, two-up above 44rem. An odd final item spans both columns so no half-length rule is left hanging.",
+      "html": "<ul class=\"ds-scope\"><li><svg class=\"ds-tick\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12.6 9.1 17.7 20 6.8\"/></svg>FEED and detailed engineering design</li><li><svg class=\"ds-tick\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12.6 9.1 17.7 20 6.8\"/></svg>Pipeline construction and maintenance</li><li><svg class=\"ds-tick\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12.6 9.1 17.7 20 6.8\"/></svg>Procurement of OCTG, wellheads and pumps</li></ul>",
+      "css": ".ds-scope { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid #d8d8d1; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } @media (min-width: 44rem) { .ds-scope { grid-template-columns: 1fr 1fr; column-gap: clamp(1.5rem, 3vw, 3rem); } .ds-scope > li:last-child:nth-child(odd) { grid-column: 1 / -1; } } .ds-scope li { display: flex; align-items: flex-start; gap: 0.85rem; padding: 0.9rem 0; border-bottom: 1px solid #d8d8d1; font-size: 0.9375rem; line-height: 1.45; color: #0b1119; } .ds-tick { width: 0.95rem; height: 0.95rem; flex: none; margin-top: 0.35rem; fill: none; stroke: #8a6116; stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter; }"
+    },
+    {
+      "name": "To-Be-Supplied Marker",
+      "kind": "card",
+      "refersTo": "marker-tbc",
+      "description": "Ships in production. The only filled, dashed container in the system, deliberately foreign so absent content is impossible to mistake for verified fact. Remove it by deleting the element, never by restyling it.",
+      "html": "<div class=\"ds-tbc\"><b>To be supplied</b>Terk Energy's project list, clients and contract values are not yet on file. Send us the jobs you want listed and we will populate the record.</div>",
+      "css": ".ds-tbc { border: 1px dashed #b8842a; border-radius: 0; background: rgba(184,132,42,0.07); padding: clamp(1.25rem, 2.4vw, 1.85rem); color: #3d4a59; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.9375rem; line-height: 1.55; } .ds-tbc b { display: block; margin-bottom: 0.4rem; color: #8a6116; font-size: 0.75rem; font-weight: 700; font-stretch: 88%; letter-spacing: 0.15em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Unconfirmed Badge",
+      "kind": "chip",
+      "refersTo": "marker-unconfirmed",
+      "description": "The inline sibling of the to-be-supplied marker, for a claim that is written but not yet verified. Sits inside a heading or a row term. Must never be styled to blend in.",
+      "html": "<span class=\"ds-term\">Financial responsibility <span class=\"ds-unconfirmed\">Confirm before publishing</span></span>",
+      "css": ".ds-term { font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: clamp(1.2rem, 1.55vw, 1.5rem); font-weight: 650; font-stretch: 106%; letter-spacing: -0.012em; line-height: 1.2; color: #0b1119; } .ds-unconfirmed { display: inline-block; margin-left: 0.6rem; padding: 0.2rem 0.5rem; border: 1px dashed #b8842a; border-radius: 0; background: rgba(184,132,42,0.09); color: #8a6116; font-size: 0.6875rem; font-weight: 700; font-stretch: 88%; letter-spacing: 0.14em; text-transform: uppercase; vertical-align: 0.18em; white-space: nowrap; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Paper and Plate",
+    "overview": "This is a capability statement that happens to be a website. It behaves like a printed document produced by a company that builds things offshore: a warm-neutral paper stock, a blue-black plate that the paper alternates against, a gold hairline scored between sections, and no decoration beyond that. Nothing floats. Nothing is contained in a box. Every division on every page is one pixel of a line, and the only reason a section reads as a section is that the ground beneath it changed colour.\n\nThe system is built out of a single variable grotesque, Archivo, self-hosted, and it uses both of that face's axes. Weight does the ordinary work. Width does the distinctive work: display type expands to 112–116%, body sits at 100%, and labels condense to 88% with heavy tracking. Type gets narrower as it gets smaller, which is the inverse of the usual instinct and is the single most fragile thing in the system. Strip the font-stretch declarations and the site still functions, still passes contrast, and stops being itself entirely.\n\nPhotographs are the third material. Ten unrelated stock frames are pushed through one calibrated desaturate-and-blue-wash grade so they read as one art direction rather than as ten purchases. The refusals are as load-bearing as the affirmations: no cards, no shadows, no rounded corners, no icon grids, no counter rows, no centred hero. The category's default composition was explicitly rejected in favour of a left-ranged, document-like one.",
+    "keyCharacteristics": [
+      "Two grounds only, warm paper (#f6f6f3) and blue-black plate (#0c141e), alternating down every page.",
+      "Gold hairlines (#b8842a, 1px) as the only ornament; neutral hairlines as the only structural divider.",
+      "One type family, worked across weight and width; width falls as size falls (116% → 88%).",
+      "Zero radius, zero shadow. Depth is ground tone and photographic scrim, never elevation.",
+      "One photographic grade family, applied so every frame belongs to the same world.",
+      "Two deliberately foreign markers, .tbc and .unconfirmed, that flag unverified content in dashed gold.",
+      "Progressive enhancement: every page is complete, readable and unanimated with JavaScript absent."
+    ],
+    "rules": [
+      { "name": "The Gold-Never-Speaks Rule", "body": "--gold sets background, border-color, and nothing else. There is not one color: var(--gold) in the system and there must never be. Gold text is --gold-deep on paper and --gold-lift on plate, always, with no exceptions and no judgement call. Getting this wrong is the single easiest way to drop the site below AA, and it looks almost right when you do it.", "section": "colors" },
+      { "name": "The Two Grounds Rule", "body": "Every surface belongs to the paper family or the plate family. There is no mid-grey, no tinted card, no third ground. --paper-sunk is a half-step within the paper family, not a new ground.", "section": "colors" },
+      { "name": "The Contrast-Derived Token Rule", "body": "Each neutral exists at the value it does because a ratio was measured, and the ratio is recorded in the stylesheet comment beside it. Do not nudge a neutral for aesthetic reasons; introduce a new token with its own measured ratio instead.", "section": "colors" },
+      { "name": "The One Family, Two Axes Rule", "body": "Archivo is the only face. Hierarchy is built from weight and width together; neither axis works alone. When adding a new text role, place it on the width ramp before choosing anything else, a new size without a width is not in this system.", "section": "typography" },
+      { "name": "The Condensed Caps Rule", "body": "Every label-rank string is uppercase, 88% width, tracked 0.14–0.17em, and gold (--gold-deep on paper, --gold-lift on plate). This is the only place uppercase is permitted at all: buttons, nav, breadcrumbs, table heads, form labels, status pills. Never set a heading or a sentence in caps.", "section": "typography" },
+      { "name": "The No-Kicker Rule", "body": "A short label directly above a heading, in the same column, is a kicker and this system does not have them. The one label that sits beside a statement lives in a margin column at ≥62rem and is visually hidden below it rather than allowed to stack into a kicker position, the accessible name survives, the ornament does not.", "section": "typography" },
+      { "name": "The Alternation Rule", "body": "A page is read as a sequence of grounds. Adding a section means deciding where it sits in the paper/plate rhythm before deciding anything about its contents. Two plate bands never touch inside <main>.", "section": "layout" },
+      { "name": "The Full-Bleed Rule", "body": "Ground colour always spans the viewport; the shell constrains content only. A section that tints a container instead of a band is a card, and this system has no cards.", "section": "layout" },
+      { "name": "The No-Shadow Rule", "body": "If a new element needs to separate from what is behind it, change the ground or draw a hairline. Reaching for a shadow means the layout problem hasn't been solved yet.", "section": "elevation" },
+      { "name": "The Square Corner Rule", "body": "Radius is zero. A rounded corner anywhere on this site is a bug, not a variation.", "section": "shapes" },
+      { "name": "The Hairline-Only Rule", "body": "Structural separation is one pixel of a line and nothing else. No boxes, no panels, no filled containers, no pills, no bordered cards. The one exception is .tbc, and it is an exception because it must look foreign.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do place a new section in the paper/plate sequence first. The page's ground rhythm is its structure, and two plate bands must never touch.",
+      "Do set font-stretch on every new text role. Use the width ramp: 112–116% for display, 100% for reading, 88–94% for anything small and tracked.",
+      "Do use --gold-deep for gold text on paper and --gold-lift for gold text on plate. Never --gold.",
+      "Do separate things with a 1px hairline, --rule-light on paper, --rule-plate on plate, and use the gold .rule element as a section opener above a heading, followed by 1.6rem.",
+      "Do wrap any new photograph in .ph, so it inherits the grade, the wash, the scrim and the isolation: isolate that contains the blend. An ungraded image will not belong to this site.",
+      "Do write base component styles for paper first, then add a .plate ... descendant override for the dark ground. The cascade runs light → dark; .detail, .field, .tbc, .rows and .scope are all built this way and this direction has already been inverted once by mistake.",
+      "Do apply every header, footer and SVG-sprite edit to all six HTML files. There is no build step and no templating, the shared markup is duplicated by hand and drifts silently.",
+      "Do gate anything that hides content on html.js, and give it a prefers-reduced-motion off-switch. The site must be complete with terk.js absent.",
+      "Do leave .tbc and .unconfirmed exactly as loud as they are, and remove them by deleting the element once the fact is confirmed.",
+      "Do keep photography out of print and give every image intrinsic width/height."
+    ],
+    "donts": [
+      "Don't add a card, a panel, a tinted container, a pill, or a bordered box. If content needs to separate, change the ground or draw a hairline.",
+      "Don't add a box-shadow, a drop-shadow, a glow, or any radius above 0. The only exceptions in the system are the inset focus ring and the 1px on the focus outline.",
+      "Don't set color: var(--gold). Structural gold is a ground and a stroke only.",
+      "Don't put a short label directly above a heading in the same column. That is a kicker; the statement band goes to the trouble of visually hiding its own label to avoid becoming one.",
+      "Don't set headings or sentences in uppercase. Caps are reserved for label rank at 88–94% width with 0.11–0.17em tracking.",
+      "Don't reach for a second typeface, an icon font, or an emoji glyph. Icons are stroked SVG symbols in the page sprite with square caps and mitred joins.",
+      "Don't normalise the three photographic grades to one set of numbers. The hero is deliberately less desaturated and carries no colour-blend wash so the rig stays readable; the page header is deliberately darker because display type sits on it.",
+      "Don't add new spacing values by hand. The rhythm is 1.6rem after a rule, 1.35rem after a heading, 2rem to a link, 2.35rem to an action row, and --band / --band-tight between sections.",
+      "Don't keep writing that rhythm as inline style attributes. The values are canon; the delivery mechanism is technical debt, promote a repeated inline margin into a class rather than adding a forty-first one.",
+      "Don't use --plate-raised, --steel, or --measure-tight. They are declared in :root and referenced nowhere; they are not part of this system.",
+      "Don't introduce a mid-tone grey ground. Four grounds exist and they are a ladder, not a palette."
+    ]
+  }
+}

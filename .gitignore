@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+# Third-party source material. NOT committed, deliberately.
+#
+# ref/ holds Dajo Energy Limited's company profile. That is a DIFFERENT
+# company's document. It was used as a structural and tonal reference only,
+# and none of its facts appear on this site. Committing it would republish
+# another company's material under Terk's name, and git history is difficult
+# to scrub once pushed.
+#
+# Nothing in ref/ is needed to build or run the site: the logo is already at
+# assets/img/terk-mark.png and the contact details are in includes/config.php.
+#
+# If you decide you do want it tracked, delete the next line, but check first
+# that this repository is private and that you are entitled to redistribute it.
+# ---------------------------------------------------------------------------
+/ref/
+
+# Local tooling. Machine-specific absolute paths, not portable.
+/.claude/
+/.remember/
+/.playwright-mcp/
+
+# Review artefacts: screenshots and concept sketches from the build.
+/.impeccable/shots/
+/.impeccable/sketches/
+
+# The design system record IS tracked; it documents the built site.
+!/.impeccable/design.json
+
+# Local mail capture, if TERK_MAIL_SINK is ever pointed inside the project.
+*.mail.log
+terk-mail*.log
+
+# OS and editor noise
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# Decision-page logs from the design session, not project files.
+/.impeccable/questions/

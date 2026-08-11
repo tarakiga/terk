@@ -1,0 +1,73 @@
+# Terk Energy: Apache configuration.
+# Standard cPanel and shared hosting read this file. If your host is nginx,
+# ask them for the equivalent try_files rule; everything else here is optional.
+
+# ---------------------------------------------------------------- clean URLs
+Options -MultiViews -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Send /about.php to /about once, permanently, so only one URL is ever
+    # indexed and link equity does not split across two addresses.
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+
+    # /index -> /
+    RewriteCond %{THE_REQUEST} \s/+index(\.php)?[\s?] [NC]
+    RewriteRule ^ / [R=301,L]
+
+    # Serve /about from about.php without changing the address bar.
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+    RewriteRule ^(.+?)/?$ $1.php [L]
+</IfModule>
+
+# The include files are required by the pages, never requested directly. They
+# also guard themselves with the TERK constant, so this is belt and braces.
+RedirectMatch 404 ^/includes/
+
+# --------------------------------------------------------------- error pages
+ErrorDocument 404 /404.php
+
+# ------------------------------------------------------------------ security
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+    # Everything this site loads is same-origin. If you later add an embed or a
+    # third-party form endpoint, widen this rather than removing it.
+    Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self' 'unsafe-inline'; form-action 'self' mailto:; frame-ancestors 'self'; base-uri 'self'"
+</IfModule>
+
+# Never serve the source material or the project documentation.
+<FilesMatch "\.(md|json|log)$">
+    Require all denied
+</FilesMatch>
+RedirectMatch 404 ^/ref/
+
+# ---------------------------------------------------------------- performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain application/javascript image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css                  "access plus 1 year"
+    ExpiresByType application/javascript    "access plus 1 year"
+    ExpiresByType image/jpeg                "access plus 1 year"
+    ExpiresByType image/png                 "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 year"
+    ExpiresByType font/woff2                "access plus 1 year"
+    ExpiresByType text/html                 "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|jpg|png|svg|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+AddDefaultCharset UTF-8
