@@ -29,8 +29,8 @@ require __DIR__ . '/includes/header.php';
     <div class="shell shell--text">
       <div class="head">
         <hr class="rule" data-reveal>
-        <h2 class="h2" id="hsse" data-reveal style="margin-top:1.6rem">Our HSSE commitment</h2>
-        <p class="prose" data-reveal style="margin-top:1.5rem">Terk Energy demonstrates leadership and commitment to HSE by the proper allocation of time and resources to HSES matters, and by giving HSES equal priority with work completion and milestone achievement. Our leadership commits as follows.</p>
+        <h2 class="h2 flow-160" id="hsse" data-reveal>Our HSSE commitment</h2>
+        <p class="prose flow-150" data-reveal>Terk Energy demonstrates leadership and commitment to HSE by the proper allocation of time and resources to HSES matters, and by giving HSES equal priority with work completion and milestone achievement. Our leadership commits as follows.</p>
       </div>
       <ul class="scope" data-reveal>
         <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Provide a safe work environment, and high quality, safe equipment for the work.</li>
@@ -47,8 +47,8 @@ require __DIR__ . '/includes/header.php';
     <div class="shell shell--text">
       <div class="head">
         <hr class="rule" data-reveal>
-        <h2 class="h2" id="quality" data-reveal style="margin-top:1.6rem">Our quality commitment</h2>
-        <p class="prose" data-reveal style="margin-top:1.5rem">Our primary goal is to achieve the highest standards of quality in all our business practices and operations, without compromise. We are committed to ensuring that our work processes and business activities meet standards and exceed expectations for the quality and satisfaction of all interested parties. To this end, we shall:</p>
+        <h2 class="h2 flow-160" id="quality" data-reveal>Our quality commitment</h2>
+        <p class="prose flow-150" data-reveal>Our primary goal is to achieve the highest standards of quality in all our business practices and operations, without compromise. We are committed to ensuring that our work processes and business activities meet standards and exceed expectations for the quality and satisfaction of all interested parties. To this end, we shall:</p>
       </div>
       <ul class="scope" data-reveal>
         <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Sustain a process approach, where regular monitoring of system performance, factual analysis and market feedback are the basis for effective decision-making and continual improvement.</li>
@@ -70,9 +70,9 @@ require __DIR__ . '/includes/header.php';
         </div>
         <div>
           <hr class="rule" data-reveal>
-          <h2 class="h2" id="close" data-reveal style="margin-top:1.6rem">Ask for the documents.</h2>
-          <p class="lead" data-reveal style="margin-top:1.35rem">If you are running a pre-qualification and need our HSE plan, quality manual or policy statements, ask and we will send them.</p>
-          <div class="actions" data-reveal style="margin-top:2.35rem">
+          <h2 class="h2 flow-160" id="close" data-reveal>Ask for the documents.</h2>
+          <p class="lead flow-135" data-reveal>If you are running a pre-qualification and need our HSE plan, quality manual or policy statements, ask and we will send them.</p>
+          <div class="actions flow-235" data-reveal>
             <a class="btn btn--gold" href="/contact">Request documents <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
           </div>
         </div>

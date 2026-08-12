@@ -30,10 +30,10 @@ require __DIR__ . '/includes/header.php';
 
         <div data-reveal-group>
           <hr class="rule" data-reveal>
-          <h2 class="h2" id="reach" data-reveal style="margin-top:1.6rem">Reach us directly</h2>
-          <p class="lead" data-reveal style="margin-top:1.35rem">Email and phone are answered. If your enquiry is time-bound, say so in the subject line.</p>
+          <h2 class="h2 flow-160" id="reach" data-reveal>Reach us directly</h2>
+          <p class="lead flow-135" data-reveal>Email and phone are answered. If your enquiry is time-bound, say so in the subject line.</p>
 
-          <dl class="detail" data-reveal style="margin-top:2.5rem">
+          <dl class="detail flow-250" data-reveal>
             <div><dt>Email</dt><dd><a href="mailto:info@terkenergy.com">info@terkenergy.com</a></dd></div>
             <div><dt>Telephone</dt><dd><a href="tel:+2348170141009">+234 817 014 1009</a></dd></div>
             <div><dt>Web</dt><dd><a href="https://www.terkenergy.com">www.terkenergy.com</a></dd></div>
@@ -48,7 +48,7 @@ require __DIR__ . '/includes/header.php';
                statement PDF exists, put it in assets/, change that header action to link
                to it directly, and leave this form for scope-specific enquiries. -->
           <hr class="rule">
-          <h2 class="h2" id="enquiry" style="margin-top:1.6rem;margin-bottom:1.6rem">Send an enquiry</h2>
+          <h2 class="h2 flow-160 flow-end-160" id="enquiry">Send an enquiry</h2>
 
           <!--
             FORM ENDPOINT. This posts to /send (send.php), which mails

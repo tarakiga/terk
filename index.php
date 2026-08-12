@@ -58,16 +58,16 @@ require __DIR__ . '/includes/header.php';
       <div class="split split--wide-text" data-reveal-group>
         <div>
           <hr class="rule" data-reveal>
-          <h2 class="h2" id="company" data-reveal style="margin-top:1.6rem">An indigenous integrated energy company.</h2>
-          <div class="prose" data-reveal style="margin-top:1.6rem">
+          <h2 class="h2 flow-160" id="company" data-reveal>An indigenous integrated energy company.</h2>
+          <div class="prose flow-160" data-reveal>
             <p>Terk Energy serves the Nigerian oil and gas value chain, offshore and onshore. Our offering covers engineering, procurement, construction, installation and commissioning; the operation, maintenance and upgrade of oil and gas facilities; alternative crude evacuation; maritime and logistics solutions; and asset development.</p>
             <p>We are committed to safety and to sustainability. Working alongside our technical partners, we meet client requirements on schedule and to specification, without trading either against the other.</p>
             <p>Our understanding of the value chain, our strategic partnerships and our technical capacity equip us to take on diverse projects and deliver them to standard.</p>
           </div>
-          <p style="margin-top:2rem" data-reveal><a class="link" href="/about">More about the company <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
+          <p class="flow-200" data-reveal><a class="link" href="/about">More about the company <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
         </div>
 
-        <div class="ph" data-reveal style="aspect-ratio:4/5">
+        <div class="ph ratio-45" data-reveal>
           <!-- TERK-PLACEHOLDER 02: stock pipe yard. Replace with Terk's own yard or project photography. -->
           <img src="/assets/img/pipeyard.jpg" alt="Steel tubulars racked in an industrial storage yard beneath an overhead crane." width="2000" height="1500" loading="lazy">
         </div>
@@ -84,8 +84,8 @@ require __DIR__ . '/includes/header.php';
         </div>
         <div>
           <p class="pull" data-reveal>To be a leading integrated energy service provider in Africa.</p>
-          <hr class="rule" data-reveal style="margin:clamp(2rem,3.5vw,3rem) 0">
-          <p class="prose" data-reveal style="max-width:56ch">Our mission is to create a reputable organization through hard work and diligence, whilst making a positive impact on our community and our environment.</p>
+          <hr class="rule flow-block" data-reveal>
+          <p class="prose measure-56" data-reveal>Our mission is to create a reputable organization through hard work and diligence, whilst making a positive impact on our community and our environment.</p>
         </div>
       </div>
     </div>
@@ -94,10 +94,10 @@ require __DIR__ . '/includes/header.php';
   <!-- ================= CAPABILITIES ================= -->
   <section aria-labelledby="capabilities">
     <div class="shell band band--tight">
-      <div class="head" style="margin-bottom:0">
+      <div class="head flow-end-0">
         <hr class="rule" data-reveal>
-        <h2 class="h2" id="capabilities" data-reveal style="margin-top:1.6rem">What we do</h2>
-        <p class="lead" data-reveal style="margin-top:1.35rem">Three service lines, delivered with our technical partners across onshore and offshore assets.</p>
+        <h2 class="h2 flow-160" id="capabilities" data-reveal>What we do</h2>
+        <p class="lead flow-135" data-reveal>Three service lines, delivered with our technical partners across onshore and offshore assets.</p>
       </div>
     </div>
 
@@ -163,7 +163,7 @@ require __DIR__ . '/includes/header.php';
               <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Tailored end-to-end alternative crude evacuation solutions</li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Gas commercialization</li>
             </ul>
-            <p style="margin-top:2.25rem" data-reveal><a class="link" href="/services">Full scope of services <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
+            <p class="flow-225" data-reveal><a class="link" href="/services">Full scope of services <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
           </div>
         </div>
       </div>
@@ -175,7 +175,7 @@ require __DIR__ . '/includes/header.php';
     <div class="shell shell--text">
       <div class="head">
         <hr class="rule" data-reveal>
-        <h2 class="h2" id="value" data-reveal style="margin-top:1.6rem">What a client gets when they award us the work.</h2>
+        <h2 class="h2 flow-160" id="value" data-reveal>What a client gets when they award us the work.</h2>
       </div>
 
       <ul class="rows rows--gold" data-reveal-group>
@@ -209,12 +209,12 @@ require __DIR__ . '/includes/header.php';
         </div>
         <div>
           <hr class="rule" data-reveal>
-          <h2 class="h2" id="hsse" data-reveal style="margin-top:1.6rem">Safety carries the same priority as the schedule.</h2>
-          <div class="prose" data-reveal style="margin-top:1.6rem">
+          <h2 class="h2 flow-160" id="hsse" data-reveal>Safety carries the same priority as the schedule.</h2>
+          <div class="prose flow-160" data-reveal>
             <p>We allocate time and resources to health, safety, security and environment as a matter of leadership, and we give HSSE equal priority with work completion and milestone achievement.</p>
             <p>That means a safe work environment and safe equipment, qualified and trained staff, funded provision of personal protective equipment, and HSSE in our audits, inspections and reviews rather than alongside them.</p>
           </div>
-          <p style="margin-top:2rem" data-reveal><a class="link" href="/hsse">Our HSSE and quality commitments <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
+          <p class="flow-200" data-reveal><a class="link" href="/hsse">Our HSSE and quality commitments <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a></p>
         </div>
       </div>
     </div>
@@ -226,9 +226,9 @@ require __DIR__ . '/includes/header.php';
       <div class="split" data-reveal-group>
         <div>
           <hr class="rule" data-reveal>
-          <h2 class="h2" id="close" data-reveal style="margin-top:1.6rem">Tell us the scope.</h2>
-          <p class="lead" data-reveal style="margin-top:1.35rem">Send us the tender document, the scope of work, or the problem you are trying to solve. We will tell you plainly whether it is work we can take.</p>
-          <div class="actions" data-reveal style="margin-top:2.35rem">
+          <h2 class="h2 flow-160" id="close" data-reveal>Tell us the scope.</h2>
+          <p class="lead flow-135" data-reveal>Send us the tender document, the scope of work, or the problem you are trying to solve. We will tell you plainly whether it is work we can take.</p>
+          <div class="actions flow-235" data-reveal>
             <a class="btn btn--gold" href="/contact">Start a conversation <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
           </div>
         </div>

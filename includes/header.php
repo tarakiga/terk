@@ -43,7 +43,7 @@ $canonical = TERK_ORIGIN . url($slug);
 <link rel="icon" href="/assets/img/terk-mark.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/terk-mark.png">
 <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/terk.css">
+<link rel="stylesheet" href="/assets/css/terk.css?v=<?= TERK_ASSETS ?>">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="<?= e(TERK_NAME) ?>">
 <meta property="og:url" content="<?= e($canonical) ?>">
@@ -64,7 +64,7 @@ FORM: The category standard played straight, user-pinned by the steer "something
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false"><defs>
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs>
 <symbol id="i-epcic" viewBox="0 0 24 24"><path d="M4 21 12 3l8 18M7.6 13h8.8M5.9 17.2h12.2M12 8.5V21"/></symbol>
 <symbol id="i-marine" viewBox="0 0 24 24"><path d="M3.2 14.4h17.6L18 20H6zM12 14.4V4.2M12 6.4h6l-2.4 2.4L18 11.2h-6M2.5 22c1.6-1.1 3.2-1.1 4.8 0s3.2 1.1 4.8 0 3.2-1.1 4.8 0 3.2 1.1 4.8 0"/></symbol>
 <symbol id="i-advisory" viewBox="0 0 24 24"><path d="M5 2.8h9.4L19.2 7v14.2H5zM14.2 2.8V7h5M8 16.6l2.9-3.2 2 2.1 3.3-4"/></symbol>

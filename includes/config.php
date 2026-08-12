@@ -34,6 +34,14 @@ const TERK_ORIGIN = 'https://www.terkenergy.com';
  */
 const TERK_MAIL_DOMAIN = 'terkenergy.com';
 
+/**
+ * Cache stamp for the stylesheet and the script. Both are served with a
+ * one-year immutable cache, so a returning visitor keeps the file they already
+ * have until its address changes. Raise this number whenever terk.css or
+ * terk.js changes, or the change will not reach anyone who has been here.
+ */
+const TERK_ASSETS = '2';
+
 /* --- Navigation. Order here is order on screen, in the footer, everywhere. */
 const TERK_NAV = [
     ''         => 'Home',

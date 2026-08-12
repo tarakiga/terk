@@ -1150,6 +1150,54 @@ table.record tbody th { font-weight: 600; }
   }
 }
 
+/* --- Spacing utilities ----------------------------------------------------
+   The vertical rhythm between a rule, a heading and its paragraph varies by
+   block, so it is carried here rather than baked into the type classes.
+
+   These are classes and not style attributes on purpose. The site sends
+   Content-Security-Policy with style-src 'self', which blocks every inline
+   style attribute in the markup outright: the browser drops the declaration
+   and reports it in the console. Anything positional must therefore live in
+   this stylesheet. Named by value so the number in the markup is the number
+   on the page.
+   ------------------------------------------------------------------------- */
+
+.flow-135 { margin-top: 1.35rem; }
+.flow-150 { margin-top: 1.5rem; }
+.flow-160 { margin-top: 1.6rem; }
+.flow-180 { margin-top: 1.8rem; }
+.flow-200 { margin-top: 2rem; }
+.flow-225 { margin-top: 2.25rem; }
+.flow-235 { margin-top: 2.35rem; }
+.flow-250 { margin-top: 2.5rem; }
+.flow-275 { margin-top: 2.75rem; }
+.flow-300 { margin-top: 3rem; }
+
+.flow-end-0   { margin-bottom: 0; }
+.flow-end-160 { margin-bottom: 1.6rem; }
+.flow-block   { margin-block: clamp(2rem, 3.5vw, 3rem); }
+
+.measure-14  { max-width: 14ch; }
+.measure-16  { max-width: 16ch; }
+.measure-56  { max-width: 56ch; }
+.measure-34r { max-width: 34rem; }
+
+.ratio-45 { aspect-ratio: 4 / 5; }
+
+/* The icon sprite is a definitions document, never drawn. Without this it
+   claims the SVG default 300x150 box and pushes the page down. */
+.sprite { display: none; }
+
+/* A single short message held at the optical centre: 404 and the enquiry
+   acknowledgement. */
+.midpage {
+  min-height: 74vh;
+  display: flex;
+  align-items: center;
+  padding-block: var(--band);
+}
+.midpage > .shell { width: 100%; }
+
 /* --- Small screens ------------------------------------------------------- */
 
 @media (max-width: 61.999rem) {

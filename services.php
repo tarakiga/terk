@@ -34,7 +34,7 @@ require __DIR__ . '/includes/header.php';
         </div>
         <div>
           <hr class="rule" data-reveal>
-          <h2 class="h2" id="epcic-h" data-reveal style="margin-top:1.6rem">EPCIC Services</h2>
+          <h2 class="h2 flow-160" id="epcic-h" data-reveal>EPCIC Services</h2>
           <p class="stratum__body" data-reveal>Engineering, procurement, construction, installation and commissioning. We take fixed-scope responsibility on onshore and offshore facilities, from front-end design through to handover, and carry procurement and construction with it.</p>
           <ul class="scope scope--two" data-reveal>
             <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>FEED and detailed engineering design</li>
@@ -60,7 +60,7 @@ require __DIR__ . '/includes/header.php';
         </div>
         <div>
           <hr class="rule" data-reveal>
-          <h2 class="h2" id="marine-h" data-reveal style="margin-top:1.6rem">Marine &amp; Logistics Services</h2>
+          <h2 class="h2 flow-160" id="marine-h" data-reveal>Marine &amp; Logistics Services</h2>
           <p class="stratum__body" data-reveal>We move crude and cargo. Our Alternative Crude Evacuation System runs end to end, covering regulatory and naval clearance, security, shuttle tanker, ship-to-ship transfer into the mother vessel, and hydrocarbon accounting, all under a single point of responsibility rather than a chain of separate vendors.</p>
           <ul class="scope scope--two" data-reveal>
             <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Alternative Crude Evacuation System (ACES)</li>
@@ -85,7 +85,7 @@ require __DIR__ . '/includes/header.php';
         </div>
         <div>
           <hr class="rule" data-reveal>
-          <h2 class="h2" id="advisory-h" data-reveal style="margin-top:1.6rem">Advisory &amp; Consultancy Services</h2>
+          <h2 class="h2 flow-160" id="advisory-h" data-reveal>Advisory &amp; Consultancy Services</h2>
           <p class="stratum__body" data-reveal>Technical and commercial judgement for assets and transactions. We advise on asset development, run due diligence across the technical, commercial and regulatory dimensions, and structure gas commercialization.</p>
           <ul class="scope scope--two" data-reveal>
             <li><svg class="ico" aria-hidden="true"><use href="#i-tick"></use></svg>Asset development advisory and consulting</li>
@@ -103,8 +103,8 @@ require __DIR__ . '/includes/header.php';
     <div class="shell shell--text">
       <div class="head">
         <hr class="rule" data-reveal>
-        <h2 class="h2" id="shape" data-reveal style="margin-top:1.6rem">What our engagements involve</h2>
-        <p class="lead" data-reveal style="margin-top:1.35rem">These describe the shape of the work we are set up to take. They are capability, not a claim about any particular contract.</p>
+        <h2 class="h2 flow-160" id="shape" data-reveal>What our engagements involve</h2>
+        <p class="lead flow-135" data-reveal>These describe the shape of the work we are set up to take. They are capability, not a claim about any particular contract.</p>
       </div>
 
       <ul class="rows" data-reveal-group>
@@ -129,7 +129,7 @@ require __DIR__ . '/includes/header.php';
     <div class="shell shell--text">
       <div class="head">
         <hr class="rule" data-reveal>
-        <h2 class="h2" id="deliver" data-reveal style="margin-top:1.6rem">How the work is carried</h2>
+        <h2 class="h2 flow-160" id="deliver" data-reveal>How the work is carried</h2>
       </div>
       <ul class="rows rows--gold" data-reveal-group>
         <li data-reveal>
@@ -145,7 +145,7 @@ require __DIR__ . '/includes/header.php';
           <span class="rows__def">Factory acceptance testing, inspection and quality hold points are planned into the programme, not bolted on at the end.</span>
         </li>
       </ul>
-      <div class="actions" data-reveal style="margin-top:3rem">
+      <div class="actions flow-300" data-reveal>
         <a class="btn btn--gold" href="/contact">Discuss a scope of work <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
         <a class="btn btn--ghost" href="/hsse">HSSE &amp; quality</a>
       </div>

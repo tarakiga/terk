@@ -44,6 +44,6 @@ require_once __DIR__ . '/config.php';
   </div>
 </footer>
 
-<script src="/assets/js/terk.js" defer></script>
+<script src="/assets/js/terk.js?v=<?= TERK_ASSETS ?>" defer></script>
 </body>
 </html>
