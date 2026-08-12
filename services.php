@@ -4,7 +4,6 @@ $page = [
     'slug'  => 'services',
     'title' => 'Services',
     'desc'  => 'EPCIC services, marine and logistics services, and advisory and consultancy for onshore and offshore oil and gas assets in Nigeria.',
-    'image' => 'pipeline.jpg',
 ];
 require __DIR__ . '/includes/header.php';
 ?>

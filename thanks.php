@@ -4,7 +4,6 @@ $page = [
     'slug'  => 'thanks',
     'title' => 'Enquiry received',
     'desc'  => 'Your enquiry has reached Terk Energy.',
-    'image' => 'hero-offshore.jpg',
     'noindex' => true,
 ];
 require __DIR__ . '/includes/header.php';

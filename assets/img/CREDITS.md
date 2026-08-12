@@ -43,6 +43,16 @@ photograph sits under a heavy dark grade where fine detail is invisible anyway.
 vector original (SVG, AI or EPS)**, the supplied file is a 416 × 563 raster and
 will soften on large displays.
 
+`og-card.jpg` is not a photograph. It is the link-share card, drawn from the
+site's own parts: the mark, the name set in Archivo, a gold hairline, and the
+contact details on the plate colour. It is what appears when the address is
+pasted into WhatsApp, Teams, LinkedIn or a text message, so it carries the
+telephone number and the email address at a size that survives a thumbnail. If
+the phone number or the domain ever changes, this file has to be redrawn, not
+just the pages. 1200 × 630, the Open Graph standard; everything that matters
+sits inside the middle 630 pixels, because some clients crop the preview to a
+centred square.
+
 ## Replacing these
 
 Each slot is marked in the HTML with a numbered comment, `TERK-PLACEHOLDER nn`.

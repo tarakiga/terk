@@ -4,7 +4,6 @@ $page = [
     'slug'  => '',
     'title' => 'Integrated energy services, offshore and onshore',
     'desc'  => 'Terk Energy is an indigenous integrated energy services company working across the Nigerian oil and gas value chain: EPCIC services, marine and logistics, and advisory and consultancy.',
-    'image' => 'hero-offshore.jpg',
 ];
 require __DIR__ . '/includes/header.php';
 ?>

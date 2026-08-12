@@ -4,7 +4,6 @@ $page = [
     'slug'  => 'hsse',
     'title' => 'HSSE &amp; Quality',
     'desc'  => "Terk Energy's health, safety, security and environment commitment, and our quality management commitment.",
-    'image' => 'hsse.jpg',
 ];
 require __DIR__ . '/includes/header.php';
 ?>

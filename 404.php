@@ -5,7 +5,6 @@ $page = [
     'slug'    => '404',
     'title'   => 'Page not found',
     'desc'    => 'That page is not on the Terk Energy site.',
-    'image'   => 'hero-offshore.jpg',
     'noindex' => true,
 ];
 require __DIR__ . '/includes/header.php';

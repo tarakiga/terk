@@ -20,7 +20,15 @@ require_once __DIR__ . '/config.php';
 $slug    = $page['slug']  ?? '';
 $title   = $page['title'] ?? '';
 $desc    = $page['desc']  ?? '';
-$image   = $page['image'] ?? 'hero-offshore.jpg';
+/**
+ * The link-share card: the mark, the name and the contact details on the
+ * plate. It is the default for every page rather than a photograph, because
+ * the common case is the address being pasted into WhatsApp, where the preview
+ * is often cropped to a centred square and read at thumbnail size. A branded
+ * card survives that; a photograph of a platform does not. Set 'image' on a
+ * page to override it with a filename from assets/img/.
+ */
+$image   = $page['image'] ?? 'og-card.jpg';
 $noindex = !empty($page['noindex']);
 
 $fullTitle = $slug === '' && $title !== ''
@@ -50,6 +58,12 @@ $canonical = TERK_ORIGIN . url($slug);
 <meta property="og:title" content="<?= e($fullTitle) ?>">
 <meta property="og:description" content="<?= e($desc) ?>">
 <meta property="og:image" content="<?= e(TERK_ORIGIN) ?>/assets/img/<?= e($image) ?>">
+<meta property="og:image:type" content="image/jpeg">
+<?php if ($image === 'og-card.jpg'): /* Dimensions are declared only for the card, whose size is known. */ ?>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="<?= e(TERK_NAME) ?>. <?= e(TERK_EMAIL) ?>. <?= e(TERK_PHONE) ?>.">
+<?php endif; ?>
 <meta name="twitter:card" content="summary_large_image">
 <script>document.documentElement.className += ' js';</script>
 </head>

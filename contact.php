@@ -4,7 +4,6 @@ $page = [
     'slug'  => 'contact',
     'title' => 'Contact',
     'desc'  => 'Contact Terk Energy about a scope of work, a tender, or a pre-qualification. info@terkenergy.com',
-    'image' => 'refinery.jpg',
 ];
 require __DIR__ . '/includes/header.php';
 ?>

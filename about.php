@@ -4,7 +4,6 @@ $page = [
     'slug'  => 'about',
     'title' => 'About',
     'desc'  => 'Terk Energy is an indigenous integrated energy services company serving the Nigerian oil and gas value chain. Our vision, mission, values and quality commitment.',
-    'image' => 'platform.jpg',
 ];
 require __DIR__ . '/includes/header.php';
 ?>
