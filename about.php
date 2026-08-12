@@ -100,8 +100,8 @@ require __DIR__ . '/includes/header.php';
       <div class="split" data-reveal-group>
         <div>
           <hr class="rule" data-reveal>
-          <h2 class="h2 flow-160" id="close" data-reveal>Tell us the scope.</h2>
-          <p class="lead flow-135" data-reveal>Send us the tender document, the scope of work, or the problem you are trying to solve.</p>
+          <h2 class="h2 flow-160" id="close" data-reveal>Tell us about your project.</h2>
+          <p class="lead flow-135" data-reveal>Send us your tender document, scope of work, or the problem you need solved, and we will come back to you with a clear response.</p>
           <div class="actions flow-235" data-reveal>
             <a class="btn btn--gold" href="/contact">Start a conversation <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
             <a class="btn btn--ghost" href="/services">Our capabilities</a>
@@ -110,7 +110,7 @@ require __DIR__ . '/includes/header.php';
         <div data-reveal>
           <dl class="detail">
             <div><dt>Email</dt><dd><a href="mailto:info@terkenergy.com">info@terkenergy.com</a></dd></div>
-            <div><dt>Telephone</dt><dd><a href="tel:+2348170141009">+234 817 014 1009</a></dd></div>
+            <div><dt>Telephone</dt><dd><a href="tel:<?= e(TERK_PHONE_TEL) ?>"><?= e(TERK_PHONE) ?></a></dd><dd><a href="tel:<?= e(TERK_PHONE_2_TEL) ?>"><?= e(TERK_PHONE_2) ?></a></dd></div>
             <div><dt>Web</dt><dd><a href="https://www.terkenergy.com">www.terkenergy.com</a></dd></div>
           </dl>
         </div>

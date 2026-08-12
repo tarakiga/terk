@@ -908,6 +908,9 @@ table.record tbody th { font-weight: 600; }
 }
 @media (min-width: 34rem) {
   .detail > div { grid-template-columns: 8.5rem 1fr; align-items: baseline; }
+  /* A second value under the same term, such as the second telephone number,
+     sits under the first rather than under the label. */
+  .detail dd + dd { grid-column: 2; }
 }
 .detail dt {
   font-size: var(--label);

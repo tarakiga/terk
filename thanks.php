@@ -13,11 +13,11 @@ require __DIR__ . '/includes/header.php';
     <div class="shell shell--text">
       <hr class="rule">
       <h1 class="display flow-180 measure-16">Your enquiry has reached us.</h1>
-      <p class="lead flow-160">We read every scope that comes in and we will reply to the address you gave. If the work is time-bound and you have not heard back, call the number below and say so.</p>
+      <p class="lead flow-160">We read every scope that comes in and we will reply to the address you gave. If the work is time-bound and you have not heard back, call us on the numbers below and say so.</p>
 
       <dl class="detail flow-300 measure-34r">
         <div><dt>Email</dt><dd><a href="mailto:info@terkenergy.com">info@terkenergy.com</a></dd></div>
-        <div><dt>Telephone</dt><dd><a href="tel:+2348170141009">+234 817 014 1009</a></dd></div>
+        <div><dt>Telephone</dt><dd><a href="tel:<?= e(TERK_PHONE_TEL) ?>"><?= e(TERK_PHONE) ?></a></dd><dd><a href="tel:<?= e(TERK_PHONE_2_TEL) ?>"><?= e(TERK_PHONE_2) ?></a></dd></div>
       </dl>
 
       <div class="actions flow-275">

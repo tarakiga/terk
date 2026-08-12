@@ -18,8 +18,8 @@ require __DIR__ . '/includes/header.php';
       <nav class="crumbs" aria-label="Breadcrumb">
         <a href="/">Home</a><span aria-hidden="true">/</span><span>Contact</span>
       </nav>
-      <h1 class="display">Tell us the scope.</h1>
-      <p class="lead">Send the tender document, the scope of work, or the problem. We will tell you plainly whether it is work we can take, and who will handle it.</p>
+      <h1 class="display">Tell us about your project.</h1>
+      <p class="lead">Send us your tender document, scope of work, or the problem you need solved. We will review it and respond with a clear answer on how we can support you, and tell you who will be handling it.</p>
     </div>
   </section>
 
@@ -34,7 +34,7 @@ require __DIR__ . '/includes/header.php';
 
           <dl class="detail flow-250" data-reveal>
             <div><dt>Email</dt><dd><a href="mailto:info@terkenergy.com">info@terkenergy.com</a></dd></div>
-            <div><dt>Telephone</dt><dd><a href="tel:+2348170141009">+234 817 014 1009</a></dd></div>
+            <div><dt>Telephone</dt><dd><a href="tel:<?= e(TERK_PHONE_TEL) ?>"><?= e(TERK_PHONE) ?></a></dd><dd><a href="tel:<?= e(TERK_PHONE_2_TEL) ?>"><?= e(TERK_PHONE_2) ?></a></dd></div>
             <div><dt>Web</dt><dd><a href="https://www.terkenergy.com">www.terkenergy.com</a></dd></div>
           </dl>
 

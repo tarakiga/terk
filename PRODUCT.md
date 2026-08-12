@@ -139,6 +139,7 @@ leadership names, client names, project values.
   - Email: info@terkenergy.com
   - Website: www.terkenergy.com
   - Phone: +234 817 014 1009
+  - Phone (second line, added by the client 12 Aug 2026): +234 813 661 5889
 - **Voice:** plain, technical, quietly confident. The source profile's register ("we
   currently offer the following services"), not marketing superlatives. Say what the
   company does in the trade's own vocabulary. No "innovative solutions," no

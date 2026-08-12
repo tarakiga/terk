@@ -14,8 +14,10 @@ if (!defined('TERK')) {
 /* --- Contact details. The only verified Terk facts on file. --------------- */
 const TERK_NAME      = 'Terk Energy';
 const TERK_EMAIL     = 'info@terkenergy.com';
-const TERK_PHONE     = '+234 817 014 1009';
-const TERK_PHONE_TEL = '+2348170141009';
+const TERK_PHONE       = '+234 817 014 1009';
+const TERK_PHONE_TEL   = '+2348170141009';
+const TERK_PHONE_2     = '+234 813 661 5889';
+const TERK_PHONE_2_TEL = '+2348136615889';
 const TERK_WEB       = 'www.terkenergy.com';
 
 /**
@@ -40,7 +42,7 @@ const TERK_MAIL_DOMAIN = 'terkenergy.com';
  * have until its address changes. Raise this number whenever terk.css or
  * terk.js changes, or the change will not reach anyone who has been here.
  */
-const TERK_ASSETS = '2';
+const TERK_ASSETS = '3';
 
 /* --- Navigation. Order here is order on screen, in the footer, everywhere. */
 const TERK_NAV = [

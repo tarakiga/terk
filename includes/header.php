@@ -62,7 +62,7 @@ $canonical = TERK_ORIGIN . url($slug);
 <?php if ($image === 'og-card.jpg'): /* Dimensions are declared only for the card, whose size is known. */ ?>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="<?= e(TERK_NAME) ?>. <?= e(TERK_EMAIL) ?>. <?= e(TERK_PHONE) ?>.">
+<meta property="og:image:alt" content="<?= e(TERK_NAME) ?>. <?= e(TERK_EMAIL) ?>. <?= e(TERK_PHONE) ?>. <?= e(TERK_PHONE_2) ?>.">
 <?php endif; ?>
 <meta name="twitter:card" content="summary_large_image">
 <script>document.documentElement.className += ' js';</script>

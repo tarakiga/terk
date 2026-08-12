@@ -225,8 +225,8 @@ require __DIR__ . '/includes/header.php';
       <div class="split" data-reveal-group>
         <div>
           <hr class="rule" data-reveal>
-          <h2 class="h2 flow-160" id="close" data-reveal>Tell us the scope.</h2>
-          <p class="lead flow-135" data-reveal>Send us the tender document, the scope of work, or the problem you are trying to solve. We will tell you plainly whether it is work we can take.</p>
+          <h2 class="h2 flow-160" id="close" data-reveal>Tell us about your project.</h2>
+          <p class="lead flow-135" data-reveal>Send us your tender document, scope of work, or the problem you need solved. We will review it and respond with a clear answer on how we can support you.</p>
           <div class="actions flow-235" data-reveal>
             <a class="btn btn--gold" href="/contact">Start a conversation <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
           </div>
@@ -239,7 +239,8 @@ require __DIR__ . '/includes/header.php';
             </div>
             <div>
               <dt>Telephone</dt>
-              <dd><a href="tel:+2348170141009">+234 817 014 1009</a></dd>
+              <dd><a href="tel:<?= e(TERK_PHONE_TEL) ?>"><?= e(TERK_PHONE) ?></a></dd>
+              <dd><a href="tel:<?= e(TERK_PHONE_2_TEL) ?>"><?= e(TERK_PHONE_2) ?></a></dd>
             </div>
             <div>
               <dt>Web</dt>

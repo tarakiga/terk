@@ -33,6 +33,7 @@ require_once __DIR__ . '/config.php';
       <ul aria-labelledby="f-contact">
         <li><a href="mailto:<?= e(TERK_EMAIL) ?>"><?= e(TERK_EMAIL) ?></a></li>
         <li><a href="tel:<?= e(TERK_PHONE_TEL) ?>"><?= e(TERK_PHONE) ?></a></li>
+        <li><a href="tel:<?= e(TERK_PHONE_2_TEL) ?>"><?= e(TERK_PHONE_2) ?></a></li>
         <li><a href="https://<?= e(TERK_WEB) ?>"><?= e(TERK_WEB) ?></a></li>
       </ul>
     </div>
