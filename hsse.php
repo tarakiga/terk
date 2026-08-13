@@ -73,6 +73,7 @@ require __DIR__ . '/includes/header.php';
           <p class="lead flow-135" data-reveal>If you are running a pre-qualification and need our HSE plan, quality manual or policy statements, ask and we will send them.</p>
           <div class="actions flow-235" data-reveal>
             <a class="btn btn--gold" href="/contact">Request documents <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+            <a class="btn btn--ghost" href="<?= TERK_PROFILE ?>" download>Company profile (PDF)</a>
           </div>
         </div>
       </div>

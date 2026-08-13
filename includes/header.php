@@ -103,17 +103,20 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <?php foreach (TERK_NAV as $navSlug => $navLabel): ?>
       <a href="<?= url($navSlug) ?>"<?= $navSlug === $slug ? ' aria-current="page"' : '' ?>><?= $navLabel ?></a>
 <?php endforeach; ?>
+<?php /* An evaluator comparing vendors in one sitting wants the document, not a
+         form. On the contact page the form is already in front of them, so the
+         action there is the direct address instead. */ ?>
 <?php if ($slug === 'contact'): ?>
       <a class="btn btn--gold" href="mailto:<?= e(TERK_EMAIL) ?>">Email us directly</a>
 <?php else: ?>
-      <a class="btn btn--gold" href="<?= url('contact') ?>#enquiry">Request a capability statement</a>
+      <a class="btn btn--gold" href="<?= TERK_PROFILE ?>" download>Download company profile</a>
 <?php endif; ?>
     </nav>
 
 <?php if ($slug === 'contact'): ?>
     <a class="btn btn--gold" href="mailto:<?= e(TERK_EMAIL) ?>">Email us directly</a>
 <?php else: ?>
-    <a class="btn btn--gold" href="<?= url('contact') ?>#enquiry">Request capability statement</a>
+    <a class="btn btn--gold" href="<?= TERK_PROFILE ?>" download>Download company profile</a>
 <?php endif; ?>
 
     <button class="burger" type="button" aria-expanded="false" aria-controls="nav">

@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Terk Energy | Company Profile</title>
+<!--
+  TERK ENERGY: the printed company profile.
+
+  This is the source for assets/terk-energy-company-profile.pdf. It is a
+  document, not a web page: A4 pages at fixed height, no responsive behaviour,
+  no JavaScript. Every word in it already appears on the site, so the two can
+  never drift into saying different things about the company.
+
+  To produce the PDF, run print/build.ps1 (headless Chrome). To change the
+  document, edit this file and run that script again.
+
+  Fonts and images are pulled from ../assets, so this file must stay in the
+  print/ folder next to it.
+-->
+<style>
+@font-face {
+  font-family: 'Archivo';
+  src: url('../assets/fonts/archivo-latin.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: block;
+}
+
+/* --- Page ---------------------------------------------------------------- */
+
+@page { size: A4; margin: 0; }
+
+:root {
+  --paper: #ffffff;
+  --paper-sunk: #f4f4f0;
+  --ink: #0b1119;
+  --ink-soft: #3d4a59;
+  --ink-faint: #5b6875;
+  --plate: #0c141e;
+  --on-plate: #eef1f4;
+  --on-plate-soft: #a9b6c4;
+  --gold: #b8842a;
+  --gold-deep: #8a6116;
+  --gold-lift: #dfb35c;
+  --rule-light: #ddddd6;
+  --rule-plate: rgba(223, 179, 92, 0.24);
+
+  --edge: 18mm;
+}
+
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+html, body { margin: 0; padding: 0; background: #6c6c6c; }
+
+body {
+  font-family: 'Archivo', 'Segoe UI', sans-serif;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  overflow: hidden;
+  background: var(--paper);
+  page-break-after: always;
+  break-after: page;
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+
+/* On screen only, so the document can be checked before it is printed. */
+@media screen {
+  .page { margin: 8mm auto; box-shadow: 0 2mm 8mm rgba(0, 0, 0, 0.4); }
+}
+
+.page--plate { background: var(--plate); color: var(--on-plate); }
+
+.body {
+  position: absolute;
+  left: var(--edge);
+  right: var(--edge);
+  top: 32mm;
+  bottom: 22mm;
+}
+
+/* --- Running head and foot ----------------------------------------------- */
+
+.runner {
+  position: absolute;
+  left: var(--edge);
+  right: var(--edge);
+  top: 16mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 3mm;
+  border-bottom: 0.35mm solid var(--gold);
+  font-size: 7pt;
+  font-weight: 680;
+  font-stretch: 88%;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.runner b { color: var(--ink); font-weight: 750; }
+
+.folio {
+  position: absolute;
+  right: var(--edge);
+  bottom: 12mm;
+  font-size: 7.5pt;
+  font-weight: 680;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+}
+.folio__mark {
+  position: absolute;
+  left: var(--edge);
+  bottom: 12mm;
+  font-size: 7pt;
+  font-weight: 680;
+  font-stretch: 88%;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* --- Type ---------------------------------------------------------------- */
+
+h1, h2, h3 { margin: 0; font-weight: 700; font-stretch: 108%; letter-spacing: -0.015em; }
+
+.label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  font-stretch: 88%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: 0;
+}
+
+.h2 { font-size: 19pt; line-height: 1.14; margin-top: 4mm; }
+.h3 { font-size: 12.5pt; line-height: 1.2; font-stretch: 104%; }
+
+p { margin: 0 0 3.4mm 0; font-size: 9.6pt; line-height: 1.62; color: var(--ink-soft); }
+p.lead { font-size: 11pt; line-height: 1.5; color: var(--ink); }
+p:last-child { margin-bottom: 0; }
+
+.rule { height: 0.4mm; background: var(--gold); border: 0; margin: 0; width: 22mm; }
+
+.page--plate .label { color: var(--gold-lift); }
+.page--plate p { color: var(--on-plate-soft); }
+.page--plate .h2, .page--plate .h3 { color: var(--on-plate); }
+
+/* --- Scope lists --------------------------------------------------------- */
+
+.scope { list-style: none; margin: 0; padding: 0; }
+.scope li {
+  position: relative;
+  padding-left: 7mm;
+  margin-bottom: 4.4mm;
+  font-size: 9.6pt;
+  line-height: 1.45;
+  color: var(--ink);
+  break-inside: avoid;
+}
+.scope .ico {
+  position: absolute;
+  left: 0;
+  top: 0.9mm;
+  width: 4mm;
+  height: 4mm;
+  stroke: var(--gold);
+  stroke-width: 2.4;
+  fill: none;
+  stroke-linecap: square;
+}
+.scope--two { column-count: 2; column-gap: 10mm; }
+.page--plate .scope li { color: var(--on-plate); }
+.page--plate .scope .ico { stroke: var(--gold-lift); }
+
+/* --- Term and definition rows -------------------------------------------- */
+
+.rows { list-style: none; margin: 0; padding: 0; border-top: 0.2mm solid var(--rule-light); }
+.rows li {
+  display: grid;
+  grid-template-columns: 46mm 1fr;
+  gap: 6mm;
+  padding: 4mm 0;
+  border-bottom: 0.2mm solid var(--rule-light);
+  break-inside: avoid;
+}
+.rows__term {
+  font-size: 10pt;
+  font-weight: 700;
+  font-stretch: 104%;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.rows__def { font-size: 9.2pt; line-height: 1.55; color: var(--ink-soft); }
+.page--plate .rows,
+.page--plate .rows li { border-color: var(--rule-plate); }
+.page--plate .rows__term { color: var(--gold-lift); }
+.page--plate .rows__def { color: var(--on-plate-soft); }
+
+/* --- Photographs --------------------------------------------------------- */
+
+/* The grade these carry is baked into the files by print/prepare-images.py.
+   A CSS filter here would stop the renderer from carrying the JPEG through
+   and would take the finished PDF from two megabytes to twelve. */
+.shot { position: relative; overflow: hidden; background: var(--plate); }
+.shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Cover --------------------------------------------------------------- */
+
+.cover { background: var(--plate); color: var(--on-plate); }
+.cover__ph { position: absolute; inset: 0; }
+.cover__ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cover__in {
+  position: absolute;
+  left: var(--edge);
+  right: var(--edge);
+  top: 30mm;
+  bottom: 22mm;
+  display: flex;
+  flex-direction: column;
+}
+.cover__mark { width: 26mm; }
+.cover__mark img { width: 100%; display: block; }
+.cover__name {
+  margin-top: 8mm;
+  font-size: 25pt;
+  font-weight: 750;
+  font-stretch: 108%;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.cover__name span { color: var(--gold-lift); }
+.cover__title {
+  margin-top: auto;
+  font-size: 40pt;
+  line-height: 1.02;
+  font-weight: 700;
+  font-stretch: 112%;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.cover__sub {
+  margin-top: 6mm;
+  padding-top: 6mm;
+  border-top: 0.4mm solid var(--gold);
+  font-size: 10.5pt;
+  line-height: 1.5;
+  color: var(--on-plate-soft);
+  max-width: 105mm;
+}
+.cover__contact {
+  margin-top: 14mm;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5mm 8mm;
+}
+.cover__contact div { border-top: 0.2mm solid var(--rule-plate); padding-top: 3mm; }
+.cover__contact dt {
+  font-size: 6.6pt;
+  font-weight: 700;
+  font-stretch: 88%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-lift);
+  margin-bottom: 1.6mm;
+}
+.cover__contact dd { margin: 0; font-size: 10pt; font-weight: 550; color: #fff; }
+
+/* --- Section furniture --------------------------------------------------- */
+
+.head { margin-bottom: 8mm; }
+.head .h2 { max-width: 130mm; }
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; align-items: start; }
+.split--wide { grid-template-columns: 1.25fr 1fr; }
+
+.statement {
+  background: var(--plate);
+  color: var(--on-plate);
+  padding: 10mm;
+  margin-top: 10mm;
+}
+.statement .pull {
+  font-size: 16pt;
+  line-height: 1.25;
+  font-weight: 620;
+  font-stretch: 104%;
+  color: #fff;
+  margin: 4mm 0 0 0;
+}
+.statement hr { width: 22mm; height: 0.4mm; background: var(--gold-lift); border: 0; margin: 6mm 0; }
+.statement p { color: var(--on-plate-soft); font-size: 9.6pt; margin: 0; }
+
+.sunk { background: var(--paper-sunk); padding: 8mm; }
+
+/* --- Closing page -------------------------------------------------------- */
+
+.close__name {
+  font-size: 22pt;
+  font-weight: 750;
+  font-stretch: 108%;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-top: 7mm;
+}
+.close__name span { color: var(--gold-lift); }
+.close__detail { margin-top: 12mm; border-top: 0.2mm solid var(--rule-plate); }
+.close__detail div {
+  display: grid;
+  grid-template-columns: 34mm 1fr;
+  gap: 6mm;
+  align-items: baseline;
+  padding: 4.5mm 0;
+  border-bottom: 0.2mm solid var(--rule-plate);
+}
+.close__detail dt {
+  font-size: 7pt;
+  font-weight: 700;
+  font-stretch: 88%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-lift);
+}
+.close__detail dd { margin: 0; font-size: 11.5pt; font-weight: 550; color: #fff; }
+</style>
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><defs>
+<symbol id="i-tick" viewBox="0 0 24 24"><path d="M4 12.6 9.1 17.7 20 6.8"/></symbol>
+</defs></svg>
+
+
+<!-- ============================================================ 1. COVER -->
+<section class="page cover">
+  <div class="cover__ph"><img src="img/hero-offshore.jpg" alt=""></div>
+  <div class="cover__in">
+    <div class="cover__mark"><img src="../assets/img/terk-mark.png" alt=""></div>
+    <div class="cover__name">TERK <span>ENERGY</span></div>
+
+    <h1 class="cover__title">Company<br>Profile</h1>
+    <p class="cover__sub">An indigenous integrated energy services company working across the Nigerian oil and gas value chain, offshore and onshore.</p>
+
+    <dl class="cover__contact">
+      <div><dt>Email</dt><dd>info@terkenergy.com</dd></div>
+      <div><dt>Web</dt><dd>www.terkenergy.com</dd></div>
+      <div><dt>Telephone</dt><dd>+234 817 014 1009</dd></div>
+      <div><dt>Telephone</dt><dd>+234 813 661 5889</dd></div>
+    </dl>
+  </div>
+</section>
+
+
+<!-- ====================================================== 2. WHO WE ARE -->
+<section class="page">
+  <div class="runner"><b>Terk Energy</b><span>Who we are</span></div>
+  <div class="body">
+    <div class="head">
+      <hr class="rule">
+      <h2 class="h2">An indigenous integrated energy company.</h2>
+    </div>
+
+    <div class="split split--wide">
+      <div>
+        <p>Terk Energy serves the Nigerian oil and gas value chain, offshore and onshore. Our offering covers engineering, procurement, construction, installation and commissioning; the operation, maintenance and upgrade of oil and gas facilities; alternative crude evacuation; maritime and logistics solutions; and asset development.</p>
+        <p>Terk and its affiliates are committed to safety and to sustainability, and we continue to meet the demands of our clients efficiently: on schedule, to specification, and without shortcuts on either count.</p>
+        <p>Our experience, our strategic partnerships and our understanding of the Nigerian oil and gas value chain, offshore and onshore, equip us with the technical expertise and the resources to deliver diverse projects when given the opportunity.</p>
+      </div>
+      <div class="shot" style="height:96mm"><img src="img/pipeyard.jpg" alt=""></div>
+    </div>
+
+    <div class="statement">
+      <p class="label">Vision</p>
+      <p class="pull">To be a leading integrated energy service provider in Africa.</p>
+      <hr>
+      <p class="label">Mission</p>
+      <p style="margin-top:3mm">Our mission is to create a reputable organization through hard work and diligence, whilst making a positive impact on our community and our environment.</p>
+    </div>
+  </div>
+  <div class="folio__mark">Terk Energy</div>
+  <div class="folio">02</div>
+</section>
+
+
+<!-- =============================================== 3. VALUES AND STRUCTURE -->
+<section class="page">
+  <div class="runner"><b>Terk Energy</b><span>Values and structure</span></div>
+  <div class="body">
+    <div class="head">
+      <hr class="rule">
+      <h2 class="h2">Our core values</h2>
+      <p class="lead" style="margin-top:4mm">Five commitments that decide how we take on work and how we behave once we have it.</p>
+    </div>
+
+    <ul class="rows">
+      <li><span class="rows__term">Teamwork</span><span class="rows__def">We win together, leveraging diverse strengths for collective success.</span></li>
+      <li><span class="rows__term">Excellence</span><span class="rows__def">We hold ourselves to the highest standards in everything we do.</span></li>
+      <li><span class="rows__term">Customer obsession</span><span class="rows__def">We put our clients at the centre, always seeking to exceed expectations.</span></li>
+      <li><span class="rows__term">Ownership</span><span class="rows__def">We take responsibility, act with integrity, and deliver on our commitments.</span></li>
+      <li><span class="rows__term">Innovation</span><span class="rows__def">We constantly improve, adapt, and pioneer better solutions.</span></li>
+    </ul>
+
+    <div class="sunk" style="margin-top:18mm;padding:11mm">
+      <p class="label">How the company is organised</p>
+      <p style="margin:3.5mm 0 7mm 0">Delivery, assurance and commercial functions are held in-house rather than assembled per project.</p>
+      <ul class="scope scope--two">
+        <li><svg class="ico"><use href="#i-tick"></use></svg>EPC project management</li>
+        <li><svg class="ico"><use href="#i-tick"></use></svg>Engineering and construction leadership</li>
+        <li><svg class="ico"><use href="#i-tick"></use></svg>Procurement</li>
+        <li><svg class="ico"><use href="#i-tick"></use></svg>EHSSQ</li>
+        <li><svg class="ico"><use href="#i-tick"></use></svg>Vessel operations</li>
+        <li><svg class="ico"><use href="#i-tick"></use></svg>Shipping and chartering</li>
+        <li><svg class="ico"><use href="#i-tick"></use></svg>Gas and commercial analysis</li>
+        <li><svg class="ico"><use href="#i-tick"></use></svg>Finance, tax and project accounting</li>
+        <li><svg class="ico"><use href="#i-tick"></use></svg>Legal and corporate services</li>
+        <li><svg class="ico"><use href="#i-tick"></use></svg>Administration and human resources</li>
+      </ul>
+    </div>
+  </div>
+  <div class="folio__mark">Terk Energy</div>
+  <div class="folio">03</div>
+</section>
+
+
+<!-- ================================================ 4. SERVICES OVERVIEW -->
+<section class="page page--plate">
+  <div class="runner" style="border-color:var(--gold-lift);color:var(--on-plate-soft)"><b style="color:#fff">Terk Energy</b><span>What we do</span></div>
+  <div class="body">
+    <div class="head">
+      <hr class="rule" style="background:var(--gold-lift)">
+      <h2 class="h2">Three service lines, one point of responsibility.</h2>
+      <p class="lead" style="margin-top:4mm;color:var(--on-plate-soft)">One point of responsibility across engineering and construction, marine and logistics, and advisory. Each line lists what we actually take on, along with our technical partners.</p>
+    </div>
+
+    <ul class="rows" style="margin-top:10mm">
+      <li>
+        <span class="rows__term">EPCIC Services</span>
+        <span class="rows__def">Engineering, procurement, construction, installation and commissioning. Fixed-scope responsibility on onshore and offshore facilities, from front-end design through to handover.</span>
+      </li>
+      <li>
+        <span class="rows__term">Marine &amp; Logistics Services</span>
+        <span class="rows__def">Alternative crude evacuation end to end, marine vessel supply and operations, offshore construction and installation, and the land-side logistics that has to meet it.</span>
+      </li>
+      <li>
+        <span class="rows__term">Advisory &amp; Consultancy</span>
+        <span class="rows__def">Technical and commercial judgement for assets and transactions: asset development, due diligence across the technical, commercial and regulatory dimensions, and gas commercialization.</span>
+      </li>
+    </ul>
+
+    <div class="shot" style="height:78mm;margin-top:12mm"><img src="img/pipeline.jpg" alt=""></div>
+  </div>
+  <div class="folio__mark" style="color:var(--on-plate-soft)">Terk Energy</div>
+  <div class="folio" style="color:var(--on-plate-soft)">04</div>
+</section>
+
+
+<!-- ============================================================= 5. EPCIC -->
+<section class="page">
+  <div class="runner"><b>Terk Energy</b><span>EPCIC Services</span></div>
+  <div class="body">
+    <div class="shot" style="height:84mm"><img src="img/welding.jpg" alt=""></div>
+
+    <div style="margin-top:9mm">
+      <hr class="rule">
+      <h2 class="h2">EPCIC Services</h2>
+      <p style="margin-top:4mm">Engineering, procurement, construction, installation and commissioning. We take fixed-scope responsibility on onshore and offshore facilities, from front-end design through to handover, and carry procurement and construction with it.</p>
+    </div>
+
+    <p class="label" style="margin-top:8mm">Scope of work</p>
+    <ul class="scope" style="margin-top:4mm">
+      <li><svg class="ico"><use href="#i-tick"></use></svg>FEED and detailed engineering design</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Pipeline construction and maintenance</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Procurement of OCTG, wellheads and pumps</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Structural, civil and mechanical engineering and construction</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Heavy-duty equipment supply, installation and maintenance</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Upgrade of onshore and offshore production facilities</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Clean energy solutions</li>
+    </ul>
+  </div>
+  <div class="folio__mark">Terk Energy</div>
+  <div class="folio">05</div>
+</section>
+
+
+<!-- ============================================================ 6. MARINE -->
+<section class="page">
+  <div class="runner"><b>Terk Energy</b><span>Marine &amp; Logistics</span></div>
+  <div class="body">
+    <div class="shot" style="height:84mm"><img src="img/tanker-alt.jpg" alt=""></div>
+
+    <div style="margin-top:9mm">
+      <hr class="rule">
+      <h2 class="h2">Marine &amp; Logistics Services</h2>
+      <p style="margin-top:4mm">We move crude and cargo. Our Alternative Crude Evacuation System runs end to end, covering regulatory and naval clearance, security, shuttle tanker, ship-to-ship transfer into the mother vessel, and hydrocarbon accounting, all under a single point of responsibility rather than a chain of separate vendors.</p>
+    </div>
+
+    <p class="label" style="margin-top:8mm">Scope of work</p>
+    <ul class="scope" style="margin-top:4mm">
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Alternative Crude Evacuation System (ACES)</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Marine vessel supply and operations</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Offshore construction and installation</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Offshore operations support services</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Land and marine logistics support</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Hydrocarbon accounting</li>
+    </ul>
+  </div>
+  <div class="folio__mark">Terk Energy</div>
+  <div class="folio">06</div>
+</section>
+
+
+<!-- ========================================================== 7. ADVISORY -->
+<section class="page">
+  <div class="runner"><b>Terk Energy</b><span>Advisory &amp; Consultancy</span></div>
+  <div class="body">
+    <div class="shot shot--own" style="height:84mm"><img src="img/advisory.jpg" alt=""></div>
+
+    <div style="margin-top:9mm">
+      <hr class="rule">
+      <h2 class="h2">Advisory &amp; Consultancy Services</h2>
+      <p style="margin-top:4mm">Technical and commercial judgement for assets and transactions. We advise on asset development, run due diligence across the technical, commercial and regulatory dimensions, and structure gas commercialization.</p>
+    </div>
+
+    <p class="label" style="margin-top:8mm">Scope of work</p>
+    <ul class="scope" style="margin-top:4mm">
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Asset development advisory and consulting</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Technical, commercial and regulatory due diligence</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Tailored end-to-end alternative crude evacuation solutions</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Gas commercialization</li>
+    </ul>
+  </div>
+  <div class="folio__mark">Terk Energy</div>
+  <div class="folio">07</div>
+</section>
+
+
+<!-- ====================================================== 8. ENGAGEMENTS -->
+<section class="page">
+  <div class="runner"><b>Terk Energy</b><span>Engagements</span></div>
+  <div class="body">
+    <div class="head">
+      <hr class="rule">
+      <h2 class="h2">What our engagements involve</h2>
+      <p class="lead" style="margin-top:4mm">These describe the shape of the work we are set up to take. They are capability, not a claim about any particular contract.</p>
+    </div>
+
+    <ul class="rows">
+      <li>
+        <span class="rows__term">Tubular procurement package</span>
+        <span class="rows__def">Procurement of casing or tubing to a stated grade, weight and range for a drilling programme. Our scope runs across manufacture with the OEM partner, factory acceptance testing, shipping, in-country clearing, and logistics through to delivery at the client's facility, with project execution and the delivery schedule on our side of the line.</span>
+      </li>
+      <li>
+        <span class="rows__term">Alternative crude evacuation campaign</span>
+        <span class="rows__def">Evacuating crude from a field without pipeline access, using a shuttle tanker and a ship-to-ship transfer into a mother vessel. End to end this covers port and naval clearance, security cover, the marine spread, the transfer itself, hydrocarbon accounting and advisory through to reconciliation.</span>
+      </li>
+      <li>
+        <span class="rows__term">Land and marine logistics support</span>
+        <span class="rows__def">Sustained logistics for a producing asset or a construction campaign: crew and supply vessel provision, marine coordination, and the land-side movement that has to meet it. Measured on availability and turnaround rather than on mobilisation.</span>
+      </li>
+    </ul>
+
+    <div class="sunk" style="margin-top:10mm">
+      <p class="label">How the work is carried</p>
+      <ul class="rows" style="margin-top:5mm;border-top-color:#dcdcd4">
+        <li style="border-bottom-color:#dcdcd4"><span class="rows__term">Scope</span><span class="rows__def">We take defined scope with a defined interface. Where we are a sub-contractor, we say so; where we hold the whole package, we hold the schedule, the procurement and the site with it.</span></li>
+        <li style="border-bottom-color:#dcdcd4"><span class="rows__term">Partners</span><span class="rows__def">Original equipment manufacturers and technical partners are named into the scope from the outset rather than found once the contract is signed.</span></li>
+        <li style="border-bottom:0"><span class="rows__term">Assurance</span><span class="rows__def">Factory acceptance testing, inspection and quality hold points are planned into the programme, not bolted on at the end.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="folio__mark">Terk Energy</div>
+  <div class="folio">08</div>
+</section>
+
+
+<!-- =========================================================== 9. HSSE -->
+<section class="page">
+  <div class="runner"><b>Terk Energy</b><span>HSSE</span></div>
+  <div class="body">
+    <div class="head">
+      <hr class="rule">
+      <h2 class="h2">Our HSSE commitment</h2>
+      <p style="margin-top:4mm">Terk Energy demonstrates leadership and commitment to HSE by the proper allocation of time and resources to HSES matters, and by giving HSES equal priority with work completion and milestone achievement. Our leadership commits as follows.</p>
+    </div>
+
+    <ul class="scope">
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Provide a safe work environment, and high quality, safe equipment for the work.</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Make financial resources available for the purchase of personal protective equipment.</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Employ qualified staff, and train staff in HSES.</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Take part in HSES policy formulation, and in HSES review meetings, audits and inspections.</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Promote an HSES culture throughout company communications.</li>
+    </ul>
+
+    <div class="shot shot--own" style="height:104mm;margin-top:12mm"><img src="img/hsse.jpg" alt=""></div>
+  </div>
+  <div class="folio__mark">Terk Energy</div>
+  <div class="folio">09</div>
+</section>
+
+
+<!-- ======================================================== 10. QUALITY -->
+<section class="page page--plate">
+  <div class="runner" style="border-color:var(--gold-lift);color:var(--on-plate-soft)"><b style="color:#fff">Terk Energy</b><span>Quality</span></div>
+  <div class="body">
+    <div class="head">
+      <hr class="rule" style="background:var(--gold-lift)">
+      <h2 class="h2">Our quality commitment</h2>
+      <p style="margin-top:4mm;color:var(--on-plate-soft)">Our primary goal is to achieve the highest standards of quality in all our business practices and operations, without compromise. We are committed to ensuring that our work processes and business activities meet standards and exceed expectations for the quality and satisfaction of all interested parties. To this end, we shall:</p>
+    </div>
+
+    <ul class="scope">
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Sustain a process approach, where regular monitoring of system performance, factual analysis and market feedback are the basis for effective decision-making and continual improvement.</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Foster mutually beneficial relationships with business partners.</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Evaluate quality risks, managed as an integral part of the system, to ensure services and output are fit for purpose.</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Identify and comply with applicable legal and regulatory requirements.</li>
+      <li><svg class="ico"><use href="#i-tick"></use></svg>Ensure that adequate resources are provided for the implementation and maintenance of our quality management system.</li>
+    </ul>
+
+    <p style="position:absolute;left:0;right:0;bottom:0;padding-top:6mm;border-top:0.2mm solid var(--rule-plate);color:var(--on-plate-soft);max-width:120mm">If you are running a pre-qualification and need our HSE plan, quality manual or policy statements, ask and we will send them.</p>
+  </div>
+  <div class="folio__mark" style="color:var(--on-plate-soft)">Terk Energy</div>
+  <div class="folio" style="color:var(--on-plate-soft)">10</div>
+</section>
+
+
+<!-- ========================================================== 11. CLOSE -->
+<section class="page page--plate">
+  <div class="body" style="top:38mm">
+    <div class="cover__mark" style="width:24mm"><img src="../assets/img/terk-mark.png" alt=""></div>
+    <div class="close__name">TERK <span>ENERGY</span></div>
+
+    <h2 class="h2" style="margin-top:16mm;font-size:26pt;max-width:120mm">Tell us about your project.</h2>
+    <p style="margin-top:5mm;font-size:11pt;max-width:120mm;color:var(--on-plate-soft)">Send us your tender document, scope of work, or the problem you need solved. We will review it and respond with a clear answer on how we can support you, and tell you who will be handling it.</p>
+
+    <dl class="close__detail">
+      <div><dt>Email</dt><dd>info@terkenergy.com</dd></div>
+      <div><dt>Telephone</dt><dd>+234 817 014 1009</dd></div>
+      <div><dt>Telephone</dt><dd>+234 813 661 5889</dd></div>
+      <div><dt>Web</dt><dd>www.terkenergy.com</dd></div>
+    </dl>
+  </div>
+  <div class="folio__mark" style="color:var(--on-plate-soft)">Terk Energy</div>
+</section>
+
+</body>
+</html>

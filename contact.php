@@ -36,16 +36,14 @@ require __DIR__ . '/includes/header.php';
             <div><dt>Email</dt><dd><a href="mailto:info@terkenergy.com">info@terkenergy.com</a></dd></div>
             <div><dt>Telephone</dt><dd><a href="tel:<?= e(TERK_PHONE_TEL) ?>"><?= e(TERK_PHONE) ?></a></dd><dd><a href="tel:<?= e(TERK_PHONE_2_TEL) ?>"><?= e(TERK_PHONE_2) ?></a></dd></div>
             <div><dt>Web</dt><dd><a href="https://www.terkenergy.com">www.terkenergy.com</a></dd></div>
+            <div><dt>Profile</dt><dd><a href="<?= TERK_PROFILE ?>" download>Company profile (PDF)</a></dd></div>
           </dl>
 
         </div>
 
         <div data-reveal>
-          <!-- TERK-PLACEHOLDER 20: the "Request a capability statement" action in the
-               header of every page lands here. An evaluator comparing vendors in one
-               sitting wants the document immediately, not a form. Once Terk's capability
-               statement PDF exists, put it in assets/, change that header action to link
-               to it directly, and leave this form for scope-specific enquiries. -->
+          <!-- The company profile is a document now, so the header action downloads it
+               directly and this form is left for scope-specific enquiries. -->
           <hr class="rule">
           <h2 class="h2 flow-160 flow-end-160" id="enquiry">Send an enquiry</h2>
 

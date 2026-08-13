@@ -42,7 +42,14 @@ const TERK_MAIL_DOMAIN = 'terkenergy.com';
  * have until its address changes. Raise this number whenever terk.css or
  * terk.js changes, or the change will not reach anyone who has been here.
  */
-const TERK_ASSETS = '3';
+const TERK_ASSETS = '4';
+
+/**
+ * The printed company profile. Its source is print/company-profile.html and it
+ * is rebuilt with print/build.ps1, which writes the PDF to this path. Every
+ * word in it is also on the site, so the two cannot drift.
+ */
+const TERK_PROFILE = '/assets/terk-energy-company-profile.pdf';
 
 /* --- Navigation. Order here is order on screen, in the footer, everywhere. */
 const TERK_NAV = [

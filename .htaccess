@@ -28,6 +28,10 @@ Options -MultiViews -Indexes
 # also guard themselves with the TERK constant, so this is belt and braces.
 RedirectMatch 404 ^/includes/
 
+# The printed profile is served from /assets as a PDF. Its source, its images
+# and its build script are not part of the website.
+RedirectMatch 404 ^/print/
+
 # --------------------------------------------------------------- error pages
 ErrorDocument 404 /404.php
 

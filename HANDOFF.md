@@ -232,12 +232,48 @@ canonical URL and social preview. Confirm it, because if it is wrong no link
 preview renders when someone pastes a Terk page into an email or a Teams thread,
 which is exactly how a vendor link travels inside a procurement team.
 
-**`TERK-PLACEHOLDER 20`: the capability statement.** "Request a capability
-statement" is the most prominent action on every page and currently lands on the
-enquiry form, with that option pre-selected in the dropdown. An evaluator
-comparing four vendors in one sitting would rather have the document
-immediately. Once the PDF exists, put it in `assets/` and repoint that link in
-`includes/header.php` straight at it.
+**`TERK-PLACEHOLDER 20`: the capability statement. Done.** The printed company
+profile now exists and the header action downloads it. See section 8.
+
+---
+
+## 8. The printed company profile
+
+`assets/terk-energy-company-profile.pdf`, eleven A4 pages, about 1.5MB, which is
+small enough to attach to an email. It is the document behind "Download company
+profile" in the header of every page, and it is also linked from the contact
+details and from the foot of the HSSE page.
+
+Every word in it is already on the website. That is deliberate: a profile that
+is written separately drifts away from the site within a year, and then a
+client is holding two documents that disagree. Change the site, rebuild the
+profile, and they stay one thing.
+
+**To rebuild it after a change:**
+
+```
+python print/prepare-images.py     (only if a photograph changed)
+powershell -ExecutionPolicy Bypass -File print\build.ps1
+```
+
+The source is `print/company-profile.html`, an ordinary HTML file laid out in
+millimetres at A4. Open it in a browser to see exactly what will print. The
+build script drives headless Chrome, which every Windows machine with Chrome or
+Edge already has; nothing else needs installing. The one exception is
+`prepare-images.py`, which needs Python with Pillow and is only used when a
+photograph changes.
+
+Two things worth knowing before editing it:
+
+- The photographs carry their grade baked into the files in `print/img/`, not as
+  a CSS filter. A filter in the stylesheet stops the renderer from carrying the
+  JPEG through and takes the finished PDF from 1.5MB to 12MB.
+- The box sizes in `print/prepare-images.py` must match the ones in the HTML.
+  They are listed together at the top of that script.
+
+The document carries no date and no year, so it does not go stale on the shelf.
+When the content that is still missing arrives (section 2), it belongs in both
+places.
 
 ---
 
