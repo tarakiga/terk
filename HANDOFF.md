@@ -275,6 +275,30 @@ The document carries no date and no year, so it does not go stale on the shelf.
 When the content that is still missing arrives (section 2), it belongs in both
 places.
 
+### The same profile in three forms
+
+| File | For |
+|---|---|
+| `assets/terk-energy-company-profile.pdf` | Sending and printing. This is the one the website links to. |
+| `print/Terk Energy Company Profile.docx` | Editing, and for tenders that ask for an editable document. |
+| `print/company-profile.md` | Plain text, for pasting into a portal or a proposal template. |
+
+The Word version is deliberately set in Arial rather than the site's Archivo: a
+document that will be opened and edited on someone else's machine has to use a
+font that machine already has. The colours, the gold rules and the structure
+carry the brand instead.
+
+To rebuild the Word version after editing `print/build-docx.js`:
+
+```
+npm install docx
+node print/build-docx.js
+```
+
+If you edit the `.docx` by hand instead, that is fine, but the next run of that
+script overwrites it. For anything more than a quick amendment, make the change
+on the website first and rebuild all three.
+
 ---
 
 ## 6. How the design works, briefly
